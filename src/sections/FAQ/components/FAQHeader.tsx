@@ -7,7 +7,7 @@ export const FAQHeader = () => {
             <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
               <p className="text-base font-semibold box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
                 <span className="bg-clip-text bg-[linear-gradient(105deg,rgb(138,165,255)_22.3694%,rgb(133,77,255)_180%)] box-border caret-transparent inline-block text-nowrap">
-                  FAQ&#39;S SECTION
+                  PERGUNTAS FREQUENTES
                 </span>
               </p>
             </div>

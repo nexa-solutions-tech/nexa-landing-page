@@ -14,7 +14,7 @@ export const AIEfficiencyTags = () => {
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-              Smart Analytics
+              Análise Inteligente
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export const AIEfficiencyTags = () => {
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-              Real-Time Collaboration
+              Colaboração em Tempo Real
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export const AIEfficiencyTags = () => {
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-              Task Prioritization
+              Priorização de Tarefas
             </p>
           </div>
         </div>

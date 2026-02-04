@@ -8,7 +8,7 @@ export const CTAHeader = () => {
               <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
                 <p className="text-base font-semibold box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
                   <span className="bg-clip-text bg-[linear-gradient(105deg,rgb(138,165,255)_22.3694%,rgb(133,77,255)_180%)] box-border caret-transparent inline-block text-nowrap">
-                    WHAT YOU STILL WAITING FOR
+                    O QUE VOCÊ ESTÁ ESPERANDO
                   </span>
                 </p>
               </div>
@@ -19,13 +19,12 @@ export const CTAHeader = () => {
       </div>
       <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-center break-words w-full">
         <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-          Grow Now with LanX
+          Transforme sua Clínica Agora
         </h2>
       </div>
       <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
         <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-          Unlock the power of data to drive smarter decisions and faster growth
-          with our platform.
+          Comece hoje mesmo a modernizar sua clínica de fisioterapia com o sistema mais completo do mercado.
         </p>
       </div>
     </div>

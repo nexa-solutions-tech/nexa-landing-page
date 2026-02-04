@@ -10,7 +10,7 @@ export const HeroCTAButtons = () => {
         >
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-white text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-              Get Started Now
+              Começar Agora
             </p>
           </div>
         </a>
@@ -22,7 +22,7 @@ export const HeroCTAButtons = () => {
         >
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
             <p className="text-white text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-              Book a Demo
+              Agendar Demonstração
             </p>
           </div>
         </a>

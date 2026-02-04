@@ -1,6 +1,6 @@
+import { FadeIn } from "@/components/FadeIn";
 import { PricingHeader } from "@/sections/Pricing/components/PricingHeader";
 import { PricingToggle } from "@/sections/Pricing/components/PricingToggle";
-import { FadeIn } from "@/components/FadeIn";
 
 export const Pricing = () => {
   return (
@@ -13,13 +13,12 @@ export const Pricing = () => {
           <PricingHeader />
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-center break-words w-full">
             <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-              Flexible Pricing Plans
+              Planos Flexíveis
             </h2>
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-              Choose a plan that fits your business needs and unlock the full
-              potential of our platform
+              Escolha o plano ideal para sua clínica e desbloqueie todo o potencial da nossa plataforma
             </p>
           </div>
         </FadeIn>

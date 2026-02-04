@@ -1,6 +1,6 @@
-    import { ComparisonHeader } from "@/sections/Comparison/components/ComparisonHeader";
+    import { FadeIn } from "@/components/FadeIn";
+import { ComparisonHeader } from "@/sections/Comparison/components/ComparisonHeader";
 import { ComparisonTable } from "@/sections/Comparison/components/ComparisonTable";
-import { FadeIn } from "@/components/FadeIn";
 
 export const Comparison = () => {
   return (
@@ -10,12 +10,12 @@ export const Comparison = () => {
           <ComparisonHeader />
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start break-words w-full">
             <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-              Why LanX Stands Out
+              Por que o FisioClinic se Destaca
             </h2>
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-none break-words w-full md:max-w-[440px]">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-              See how we compare against others in performance, growth
+              Veja como nos comparamos em performance e crescimento
             </p>
           </div>
         </FadeIn>

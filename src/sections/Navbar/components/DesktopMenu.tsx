@@ -9,7 +9,7 @@ export const DesktopMenu = () => {
           >
             <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
               <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                Features
+                Funcionalidades
               </p>
             </div>
           </a>
@@ -21,7 +21,7 @@ export const DesktopMenu = () => {
           >
             <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
               <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                Pricing
+                Planos
               </p>
             </div>
           </a>
@@ -45,7 +45,7 @@ export const DesktopMenu = () => {
           >
             <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
               <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                Contact
+                Contato
               </p>
             </div>
           </a>
@@ -58,7 +58,7 @@ export const DesktopMenu = () => {
         >
           <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-white md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-              Get Template
+              Testar Grátis
             </p>
           </div>
         </a>

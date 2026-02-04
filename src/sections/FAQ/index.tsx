@@ -1,6 +1,6 @@
-    import { FAQHeader } from "@/sections/FAQ/components/FAQHeader";
+    import { FadeIn } from "@/components/FadeIn";
+import { FAQHeader } from "@/sections/FAQ/components/FAQHeader";
 import { FAQList } from "@/sections/FAQ/components/FAQList";
-import { FadeIn } from "@/components/FadeIn";
 
 export const FAQ = () => {
   return (
@@ -10,12 +10,12 @@ export const FAQ = () => {
           <FAQHeader />
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-center break-words w-full">
             <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-              Some Common FAQ&#39;s
+              Perguntas Frequentes
             </h2>
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-              Get answers to your questions and learn about our platform
+              Tire suas dúvidas e conheça nossa plataforma
             </p>
           </div>
         </FadeIn>

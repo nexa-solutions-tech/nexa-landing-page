@@ -24,7 +24,7 @@ export const FooterNav = () => {
             href="./#pricing"
             className="box-content caret-black text-wrap md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
           >
-            Pricing
+            Planos
           </a>
         </p>
       </div>
@@ -35,7 +35,7 @@ export const FooterNav = () => {
             href="./#benefits"
             className="box-content caret-black text-wrap md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
           >
-            Benefits
+            Benefícios
           </a>
         </p>
       </div>
@@ -46,7 +46,7 @@ export const FooterNav = () => {
             href="./contact"
             className="box-content caret-black text-wrap md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
           >
-            Contact
+            Contato
           </a>
         </p>
       </div>
@@ -68,14 +68,14 @@ export const FooterNav = () => {
             href="./privacy"
             className="box-content caret-black text-wrap md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
           >
-            Privacy
+            Privacidade
           </a>
         </p>
       </div>
       <div className="static self-auto bg-transparent box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:self-stretch md:aspect-auto md:bg-gray-900 md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-0.5 md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"></div>
       <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
         <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-indigo-400 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-          landerx@mail.com
+          contato@fisioclinic.com.br
         </p>
       </div>
       <div className="static self-auto bg-transparent box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:self-stretch md:aspect-auto md:bg-gray-900 md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-0.5 md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"></div>

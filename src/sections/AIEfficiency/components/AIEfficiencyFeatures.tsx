@@ -25,13 +25,13 @@ export const AIEfficiencyFeatures = () => {
               <div className="relative flex flex-col gap-4 z-[2] overflow-hidden">
                 <div className="relative flex flex-col">
                   <h3 className="text-white text-2xl font-medium tracking-[-0.48px] leading-7 text-left font-inter">
-                    Secure &amp; Scalable
+                    Seguro & Escalável
                   </h3>
                 </div>
                 <div className="relative flex flex-col">
                   <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-left font-inter">
-                    Enterprise-grade encryption protects your information, while
-                    flexible tools adapt to your business needs.
+                    Criptografia de nível empresarial protege suas informações, enquanto
+                    ferramentas flexíveis se adaptam às necessidades da sua clínica.
                   </p>
                 </div>
               </div>
@@ -65,13 +65,13 @@ export const AIEfficiencyFeatures = () => {
               <div className="relative flex flex-col gap-4 z-[2] overflow-hidden">
                 <div className="relative flex flex-col">
                   <h3 className="text-white text-2xl font-medium tracking-[-0.48px] leading-7 text-left font-inter">
-                    Actionable Insights
+                    Insights Acionáveis
                   </h3>
                 </div>
                 <div className="relative flex flex-col">
                   <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-left font-inter">
-                    Leverage AI-powered analytics to identify trends, predict
-                    outcomes, and optimize your workflow effortlessly.
+                    Utilize análises inteligentes para identificar tendências, prever
+                    resultados e otimizar o fluxo de trabalho da sua clínica.
                   </p>
                 </div>
               </div>

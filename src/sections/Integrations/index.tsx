@@ -1,6 +1,6 @@
+import { FadeIn } from "@/components/FadeIn";
 import { IntegrationsHeader } from "@/sections/Integrations/components/IntegrationsHeader";
 import { IntegrationsList } from "@/sections/Integrations/components/IntegrationsList";
-import { FadeIn } from "@/components/FadeIn";
 
 export const Integrations = () => {
   return (
@@ -13,12 +13,12 @@ export const Integrations = () => {
           <IntegrationsHeader />
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-center break-words w-full">
             <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-              Seamless Integrations
+              Integrações Completas
             </h2>
           </div>
           <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
             <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-              Connect with your favorite tools to streamline workflows
+              Conecte com suas ferramentas favoritas para otimizar fluxos de trabalho
             </p>
           </div>
         </FadeIn>

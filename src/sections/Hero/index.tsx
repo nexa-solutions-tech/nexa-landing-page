@@ -1,7 +1,7 @@
 import { HeroContent } from "@/sections/Hero/components/HeroContent";
-import { HeroHeading } from "@/sections/Hero/components/HeroHeading";
-import { HeroDescription } from "@/sections/Hero/components/HeroDescription";
 import { HeroCTAButtons } from "@/sections/Hero/components/HeroCTAButtons";
+import { HeroDescription } from "@/sections/Hero/components/HeroDescription";
+import { HeroHeading } from "@/sections/Hero/components/HeroHeading";
 import { HeroLogos } from "@/sections/Hero/components/HeroLogos";
 
 export const Hero = () => {
@@ -23,13 +23,13 @@ export const Hero = () => {
             <div className="relative content-start items-start box-border caret-transparent gap-x-4 flex flex-col shrink-0 h-min justify-center max-w-[540px] gap-y-4 w-full z-[3] overflow-hidden">
               <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start break-words w-full">
                 <h3 className="text-white text-2xl font-medium box-border caret-transparent tracking-[-0.48px] leading-7 break-words font-inter">
-                  Distinguish yourself
+                  Destaque sua Clínica
                 </h3>
               </div>
               <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
                 <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-left font-inter">
-                  Elevate your brand with a golden tick and connect with
-                  top-tier associates.
+                  Eleve sua clínica com gestão profissional e conecte-se com
+                  pacientes de forma eficiente.
                 </p>
               </div>
             </div>

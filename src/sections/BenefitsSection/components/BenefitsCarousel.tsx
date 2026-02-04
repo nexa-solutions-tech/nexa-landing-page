@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 export const BenefitsCarousel = () => {
   const items = [
-    "Instant Savings",
-    "Flexible Payments",
-    "Intelligent Spending",
-    "Customizable Plans",
-    "Smart Insights",
-    "Real-Time Automation",
-    "Real-Time Reports",
-    "Custom AI Plans",
-    "Dedicated Support",
-    "Growth With AI",
+    "Economia de Tempo",
+    "Agenda Flexível",
+    "Gestão Inteligente",
+    "Planos Personalizáveis",
+    "Insights Clínicos",
+    "Automação em Tempo Real",
+    "Relatórios Instantâneos",
+    "Prontuário Eletrônico",
+    "Suporte Dedicado",
+    "Crescimento com IA",
   ];
 
   // Duplicate items for seamless loop

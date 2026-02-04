@@ -8,7 +8,7 @@ export const AIEfficiencyHeader = () => {
               <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
                 <p className="text-base font-semibold box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
                   <span className="bg-clip-text bg-[linear-gradient(105deg,rgb(138,165,255)_22.3694%,rgb(133,77,255)_180%)] box-border caret-transparent inline-block text-nowrap">
-                    AI-DRIVEN EFFICIENCY
+                    AUTOMAÇÃO INTELIGENTE
                   </span>
                 </p>
               </div>
@@ -19,12 +19,12 @@ export const AIEfficiencyHeader = () => {
       </div>
       <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-center break-words w-full">
         <h2 className="text-white text-[32px] font-medium box-border caret-transparent tracking-[-0.32px] leading-[38.4px] break-words text-center font-inter md:text-[44px] md:tracking-[-0.44px] md:leading-[52.8px]">
-          Never Miss an Opportunity
+          Nunca Perca um Agendamento
         </h2>
       </div>
       <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[440px] break-words w-full">
         <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-          Capture leads, analyze trends, and centralize critical insights
+          Lembretes automáticos, confirmações via WhatsApp e gestão inteligente de pacientes
         </p>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import { TestimonialsHeader } from "@/sections/Testimonials/components/TestimonialsHeader";
 import { FadeIn } from "@/components/FadeIn";
+import { TestimonialsHeader } from "@/sections/Testimonials/components/TestimonialsHeader";
 import { TestimonialCard } from "./components/TestimonialCard";
 
 export const Testimonials = () => {
@@ -15,26 +15,26 @@ export const Testimonials = () => {
         <div className="relative content-center items-center box-border caret-transparent gap-x-6 flex flex-col shrink-0 flex-wrap h-min justify-center max-w-[1120px] gap-y-6 w-full z-[2] md:flex-row">
           <FadeIn direction="up" delay={0.1} className="contents">
             <TestimonialCard
-              testimonialText="Highly intuitive and polished. It's everything we needed and more!"
+              testimonialText="O sistema revolucionou a gestão da minha clínica. Agendamentos automáticos e prontuários digitais salvaram horas do meu dia!"
               rating="5.0"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/27.png"
-              userImageAlt="user pic"
+              userImageAlt="foto do usuário"
               userImageSizes="40px"
               userImageClassName="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_1024_/_1024] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[100%]"
-              userName="Alex jonas"
-              userTitle="JS Marketing"
+              userName="Dra. Ana Beatriz"
+              userTitle="Fisioterapeuta Ortopédica"
             />
           </FadeIn>
           <FadeIn direction="up" delay={0.2} className="contents">
             <TestimonialCard
-              testimonialText="This is truly Incredible and have saved us countless hours!"
+              testimonialText="A integração com WhatsApp para lembretes reduziu em 70% as faltas dos meus pacientes. Incrível!"
               rating="5.0"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/19.png"
               userImageAlt=""
-              userName="John Robert"
-              userTitle="SM Strategy"
+              userName="Dr. Carlos Eduardo"
+              userTitle="Clínica FisioVida"
             />
           </FadeIn>
           <FadeIn direction="up" delay={0.3} className="contents">
@@ -73,55 +73,55 @@ export const Testimonials = () => {
           </FadeIn>
           <FadeIn direction="up" delay={0.5} className="contents">
             <TestimonialCard
-              testimonialText="Pure brilliance! This has streamlined our workflow massively."
+              testimonialText="Excelente para organização! Os relatórios de evolução ajudam muito no acompanhamento dos pacientes."
               rating="4.8"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               halfStarIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-17.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/1.avif"
               userImageAlt=""
               userImageClassName="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_382_/_512] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[100%]"
-              userName="Maggie Hue"
-              userTitle="BS Growth Ceo"
+              userName="Dra. Marina Costa"
+              userTitle="Fisioterapeuta Esportiva"
             />
           </FadeIn>
           <FadeIn direction="up" delay={0.6} className="contents">
             <TestimonialCard
-              testimonialText="A top-notch solution! It's been transformative for our entire team."
+              testimonialText="A melhor solução que já usei! Transformou completamente a gestão da nossa equipe de fisioterapeutas."
               rating="5.0"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/46.png"
-              userImageAlt="user pic"
+              userImageAlt="foto do usuário"
               userImageSizes="40px"
               userImageClassName="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_3456_/_4028] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[100%]"
-              userName="Tappo kao"
-              userTitle="PO Marketing"
+              userName="Dr. Roberto Almeida"
+              userTitle="Diretor Clínico"
             />
           </FadeIn>
           <FadeIn direction="up" delay={0.7} className="contents">
             <TestimonialCard
-              testimonialText="Amazing product! It’s made our processes seamless and effective."
+testimonialText="Produto incrível! O faturamento automático com TISS facilitou demais nossa vida administrativa."
               rating="5.0"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/31.jpg"
-              userImageAlt="user pic"
+              userImageAlt="foto do usuário"
               userImageSizes="40px"
               userImageClassName="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_3265_/_4898] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[100%]"
-              userName="jack hanma"
-              userTitle="JK Finance"
+              userName="Dra. Juliana Ferreira"
+              userTitle="Clínica Reabilitar"
               containerClassName="relative content-center items-center shadow-[rgba(41,52,255,0.3)_0px_1px_35px_0px] box-border caret-transparent gap-x-6 flex basis-auto grow-0 shrink-0 h-min justify-center max-w-[440px] min-w-[280px] gap-y-6 w-full overflow-hidden md:basis-0 md:grow md:w-px"
             />
           </FadeIn>
           <FadeIn direction="up" delay={0.8} className="contents">
             <TestimonialCard
-              testimonialText="Incredible design and functionality! This has exceeded our expectations."
+              testimonialText="Design incrível e muito funcional! Superou todas as nossas expectativas na clínica."
               rating="5.0"
               starIcon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-15.svg"
               userImageUrl="https://c.animaapp.com/mkvwf206SqHHjG/assets/32.png"
               userImageAlt=""
               userImageSizes="40px"
               userImageClassName="box-content caret-black h-auto object-fill align-middle w-auto rounded-none md:aspect-[auto_2048_/_2048] md:box-border md:caret-transparent md:h-full md:object-cover md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[100%]"
-              userName="John Robert"
-              userTitle="JO Strategy"
+              userName="Dr. Paulo Henrique"
+              userTitle="Clínica FisioCenter"
               containerClassName="relative content-center items-center shadow-[rgba(41,52,255,0.3)_0px_1px_35px_0px] box-border caret-transparent gap-x-6 flex basis-auto grow-0 shrink-0 h-min justify-center max-w-[440px] min-w-[280px] gap-y-6 w-full overflow-hidden md:basis-0 md:grow md:w-px"
             />
           </FadeIn>

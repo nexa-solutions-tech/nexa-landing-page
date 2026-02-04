@@ -10,7 +10,7 @@ export const FoundersNote = () => {
                   <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
                     <p className="text-base font-semibold box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
                       <span className="bg-clip-text bg-[linear-gradient(105deg,rgb(138,165,255)_22.3694%,rgb(133,77,255)_180%)] box-border caret-transparent inline-block text-nowrap">
-                        FOUNDERS NOTE
+                      MENSAGEM DO FUNDADOR
                       </span>
                     </p>
                   </div>
@@ -132,7 +132,7 @@ export const FoundersNote = () => {
             <div className="relative content-center items-center box-border caret-transparent gap-x-1 flex shrink-0 h-min justify-center gap-y-1 w-min overflow-hidden">
               <div className="relative box-border caret-transparent flex flex-col shrink-0 justify-start text-nowrap">
                 <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] text-left text-nowrap font-inter">
-                  Co-founder &amp; ex google designer
+                  Fundador & Fisioterapeuta
                 </p>
               </div>
             </div>
