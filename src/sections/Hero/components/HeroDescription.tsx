@@ -5,11 +5,12 @@ export const HeroDescription = () => {
     <FadeIn
       direction="up"
       delay={0.2}
-      className="relative box-border caret-transparent flex flex-col shrink-0 justify-start max-w-[540px] break-words w-full"
+      className="relative flex flex-col max-w-[540px] w-full"
     >
-      <p className="text-violet-100/70 text-base box-border caret-transparent tracking-[-0.32px] leading-[25.6px] break-words text-center font-inter">
-        Gerencie agendamentos, prontuários eletrônicos, evolução de pacientes e 
-        faturamento em um só lugar. Simplifique sua rotina e foque no que importa: cuidar dos seus pacientes.
+      <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-center font-inter">
+        Gerencie agendamentos, prontuários eletrônicos, evolução de pacientes e
+        faturamento em um só lugar. Simplifique sua rotina e foque no que
+        importa: cuidar dos seus pacientes.
       </p>
     </FadeIn>
   );

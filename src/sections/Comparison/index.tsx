@@ -10,14 +10,14 @@ import { ComparisonTable } from "@/sections/Comparison/components/ComparisonTabl
 export const Comparison = () => {
   return (
     <Section className="justify-start rounded-tr-2xl rounded-bl-2xl md:rounded-tr-[48px] md:rounded-bl-[48px]">
-      <SectionContainer gap="lg" className="z-[2] overflow-hidden justify-center flex-nowrap">
+      <SectionContainer>
         <FadeIn direction="up">
           <SectionHeader
             badge={<ComparisonHeader />}
             title="Por que o FisioClinic se Destaca"
             description="Veja como nos comparamos em performance e crescimento"
             maxDescriptionWidth="none"
-            className="z-[1]"
+            className="z-[3]"
           />
         </FadeIn>
         <FadeIn direction="up" delay={0.2} fullWidth>
@@ -25,7 +25,7 @@ export const Comparison = () => {
         </FadeIn>
       </SectionContainer>
       <GradientLine />
-      <GradientBlob variant="rotated" />
+      <GradientBlob variant="default" />
     </Section>
   );
 };

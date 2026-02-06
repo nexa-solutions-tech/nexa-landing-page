@@ -9,7 +9,7 @@ const benefits = [
       "Agenda profissional com filtros avançados por profissional, especialidade e horário. Visualize e gerencie todos os atendimentos em tempo real.",
   },
   {
-    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-4.svg",
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",
     title: "Avaliações & Evoluções",
     description:
       "Registre avaliações completas e acompanhe a evolução dos pacientes com histórico detalhado. Documentação clínica organizada e acessível.",

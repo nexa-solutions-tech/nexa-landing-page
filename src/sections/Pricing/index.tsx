@@ -6,12 +6,13 @@ import { LightRays } from "@/components/LightRays";
 import { Section } from "@/components/Section";
 import { SectionContainer } from "@/components/SectionContainer";
 import { SectionHeader } from "@/components/SectionHeader";
+import { PricingCards } from "@/sections/Pricing/components/PricingCards";
 import { PricingHeader } from "@/sections/Pricing/components/PricingHeader";
 import { PricingToggle } from "@/sections/Pricing/components/PricingToggle";
 
 export const Pricing = () => {
   return (
-    <Section>
+    <Section id="pricing">
       <SectionContainer>
         <FadeIn direction="up">
           <SectionHeader
@@ -23,6 +24,9 @@ export const Pricing = () => {
         </FadeIn>
         <FadeIn direction="up" delay={0.2} fullWidth>
           <PricingToggle />
+        </FadeIn>
+        <FadeIn direction="up" delay={0.3} fullWidth>
+          <PricingCards />
         </FadeIn>
         <FadeIn direction="up" delay={0.4}>
           <Badge

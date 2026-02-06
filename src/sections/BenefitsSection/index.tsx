@@ -10,7 +10,7 @@ import { BenefitsList } from "@/sections/BenefitsSection/components/BenefitsList
 
 export const BenefitsSection = () => {
   return (
-    <Section>
+    <Section id="features">
       <SectionContainer>
         <FadeIn direction="up">
           <BenefitsHeader />

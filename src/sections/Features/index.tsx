@@ -3,7 +3,10 @@ import { FeatureCard } from "@/sections/Features/components/FeatureCard";
 
 export const Features = () => {
   return (
-    <section className="relative content-center items-center box-border caret-transparent gap-x-6 flex flex-col shrink-0 h-min justify-center max-w-[1200px] gap-y-6 w-full z-[2] scroll-mt-[100px]">
+    <section
+      id="features"
+      className="relative content-center items-center box-border caret-transparent gap-x-6 flex flex-col shrink-0 h-min justify-center max-w-[1200px] gap-y-6 w-full z-[2] scroll-mt-[100px]"
+    >
       <div className="relative content-start items-start box-border caret-transparent gap-x-6 flex flex-col shrink-0 flex-wrap h-min justify-center gap-y-6 w-full md:flex-row">
         <FadeIn direction="up" delay={0.1} className="flex-1">
           <FeatureCard

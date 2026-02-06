@@ -1,84 +1,92 @@
-export const FAQList = () => {
-  return (
-    <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-      <div className="static box-content caret-black shrink max-w-none min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:max-w-screen-sm md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-        <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal max-w-none gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-3 md:flex md:flex-col md:h-min md:justify-center md:max-w-full md:overscroll-x-auto md:overscroll-y-auto md:gap-y-3 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static [align-items:normal] bg-none shadow-none box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:bg-[linear-gradient(108deg,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] md:shadow-[rgba(138,165,255,0.2)_0px_1px_0px_0px_inset] md:box-border md:caret-transparent md:gap-x-2 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:px-4 md:py-3 md:scroll-m-0 md:scroll-p-[auto] md:rounded-[10px]">
-              <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-2.5 md:flex md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <div className="static box-content caret-black block basis-auto flex-row grow-0 shrink justify-normal min-h-0 min-w-0 opacity-100 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:basis-0 md:flex-col md:grow md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:opacity-90 md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-white md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                    O que é o FisioClinic?
-                  </p>
-                </div>
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 opacity-100 transform-none w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-5 md:min-h-[auto] md:min-w-[auto] md:opacity-75 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-5 md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:-scale-100">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-32.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-white md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:blur-0 md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  O FisioClinic é uma plataforma completa de gestão para clínicas de fisioterapia. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static bg-none shadow-none box-content caret-black h-auto w-auto rounded-none md:relative md:aspect-auto md:bg-[linear-gradient(108deg,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] md:shadow-[rgba(138,165,255,0.2)_0px_1px_0px_0px_inset] md:box-border md:caret-transparent md:h-12 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[10px]">
-              <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block shrink h-auto justify-normal gap-y-[normal] top-auto inset-x-auto md:absolute md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-2.5 md:flex md:shrink-0 md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:top-3 md:inset-x-4">
-                <div className="static box-content caret-black block basis-auto flex-row grow-0 shrink justify-normal min-h-0 min-w-0 opacity-100 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:basis-0 md:flex-col md:grow md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:opacity-90 md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-white md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                    Posso integrar com convênios e planos de saúde?
-                  </p>
-                </div>
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 opacity-100 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-5 md:min-h-[auto] md:min-w-[auto] md:opacity-75 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-5 md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-32.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-white md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal opacity-100 break-normal top-auto inset-x-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:flex md:blur-[5px] md:flex-col md:shrink-0 md:justify-start md:opacity-0 md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:top-11 md:inset-x-4">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Sim! O sistema é totalmente compatível com TISS e permite faturamento automatizado para convênios e planos de saúde.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static bg-none shadow-none box-content caret-black h-auto w-auto rounded-none md:relative md:aspect-auto md:bg-[linear-gradient(108deg,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] md:shadow-[rgba(138,165,255,0.2)_0px_1px_0px_0px_inset] md:box-border md:caret-transparent md:h-12 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[10px]">
-              <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block shrink h-auto justify-normal gap-y-[normal] top-auto inset-x-auto md:absolute md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-2.5 md:flex md:shrink-0 md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:top-3 md:inset-x-4">
-                <div className="static box-content caret-black block basis-auto flex-row grow-0 shrink justify-normal min-h-0 min-w-0 opacity-100 w-auto break-normal md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:basis-0 md:flex-col md:grow md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:opacity-90 md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-white md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                    O sistema funciona em dispositivos móveis?
-                  </p>
-                </div>
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 opacity-100 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-5 md:min-h-[auto] md:min-w-[auto] md:opacity-75 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-5 md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-32.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-white md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal opacity-100 break-normal top-auto inset-x-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:flex md:blur-[5px] md:flex-col md:shrink-0 md:justify-start md:opacity-0 md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:top-11 md:inset-x-4">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-left md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Sim! O FisioClinic é 100% responsivo e funciona perfeitamente em celulares e tablets, permitindo que você acesse de qualquer lugar.
-                </p>
-              </div>
-            </div>
-          </div>
+import { useState } from "react";
+
+const faqs = [
+  {
+    question: "O que é o FisioClinic?",
+    answer:
+      "O FisioClinic é uma plataforma completa de gestão para clínicas de fisioterapia. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
+  },
+  {
+    question: "Posso integrar com convênios e planos de saúde?",
+    answer:
+      "Sim! O sistema é totalmente compatível com TISS e permite faturamento automatizado para convênios e planos de saúde.",
+  },
+  {
+    question: "O sistema funciona em dispositivos móveis?",
+    answer:
+      "Sim! O FisioClinic é 100% responsivo e funciona perfeitamente em celulares e tablets, permitindo que você acesse de qualquer lugar.",
+  },
+];
+
+const FAQItem = ({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}: {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
+}) => (
+  <div className="w-full">
+    <button
+      onClick={onToggle}
+      className="w-full bg-[linear-gradient(108deg,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] shadow-[rgba(138,165,255,0.2)_0px_1px_0px_0px_inset] rounded-[10px] px-4 py-3 overflow-hidden transition-all duration-300"
+    >
+      <div className="flex items-center justify-between gap-2.5 w-full">
+        {/* Question */}
+        <p className="text-white text-base font-inter tracking-[-0.32px] leading-[25.6px] text-left opacity-90 flex-1">
+          {question}
+        </p>
+
+        {/* Toggle Icon */}
+        <div
+          className={`w-5 h-5 opacity-75 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
+          <img
+            src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-32.svg"
+            alt="Toggle"
+            className="w-full h-full text-white"
+          />
         </div>
+      </div>
+
+      {/* Answer (collapsible) */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"
+        }`}
+      >
+        <p className="text-violet-100/70 text-base font-inter tracking-[-0.32px] leading-[25.6px] text-left">
+          {answer}
+        </p>
+      </div>
+    </button>
+  </div>
+);
+
+export const FAQList = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className="w-full max-w-screen-sm mx-auto">
+      <div className="flex flex-col items-center gap-3 w-full">
+        {faqs.map((faq, index) => (
+          <FAQItem
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={openIndex === index}
+            onToggle={() => handleToggle(index)}
+          />
+        ))}
       </div>
     </div>
   );

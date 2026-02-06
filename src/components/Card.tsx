@@ -16,7 +16,7 @@ const variantClasses = {
   },
   gradient: {
     outer:
-      "bg-[linear-gradient(136deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] p-px",
+      "bg-[linear-gradient(180deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] p-px",
     inner: "bg-[radial-gradient(96%_96%_at_49.3%_-25.1%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)]",
   },
   dark: {

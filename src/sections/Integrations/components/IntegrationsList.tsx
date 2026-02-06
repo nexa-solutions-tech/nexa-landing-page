@@ -1,119 +1,106 @@
+const integrations = [
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-20.svg",
+    description: "Lembretes automáticos via WhatsApp para seus pacientes.",
+  },
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-21.svg",
+    description: "Sincronize agendamentos com Google Agenda e outros calendários.",
+  },
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-22.svg",
+    description: "Integre com convênios e sistemas de faturamento TISS",
+  },
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-23.svg",
+    description: "Conecte com dezenas de outras ferramentas sem código",
+  },
+];
+
+const IntegrationCard = ({
+  icon,
+  description,
+}: {
+  icon: string;
+  description: string;
+}) => (
+  <div className="relative w-full md:w-[326px] z-[3]">
+    <div className="flex flex-col items-center justify-center gap-6 px-6 py-11 rounded-2xl">
+      {/* Icon Container */}
+      <div className="flex items-center justify-center p-2 rounded-lg shadow-[rgba(0,0,0,0.17)_0px_0.764039px_0.687635px_-0.5px,rgba(0,0,0,0.17)_0px_1.87166px_1.68449px_-1px,rgba(0,0,0,0.17)_0px_3.54652px_3.19187px_-1.5px,rgba(0,0,0,0.16)_0px_6.19129px_5.57216px_-2px,rgba(0,0,0,0.15)_0px_10.7756px_9.69802px_-2.5px,rgba(0,0,0,0.12)_0px_19.7367px_17.7631px_-3px,rgba(0,0,0,0.08)_0px_39px_35.1px_-3.5px,rgba(138,165,255,0.5)_0px_2px_4px_0px_inset]">
+        <img
+          src={icon}
+          alt="Integration icon"
+          className="w-[35px] h-[38px] text-indigo-400"
+        />
+      </div>
+      {/* Description */}
+      <p className="text-violet-100/70 text-base font-inter tracking-[-0.32px] leading-[25.6px] text-center break-words z-[2]">
+        {description}
+      </p>
+    </div>
+  </div>
+);
+
+const CenterLogo = () => (
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]">
+    <div className="flex items-center justify-center gap-2.5 p-7">
+      <div className="flex flex-col items-center justify-center gap-6">
+        {/* Glowing dot */}
+        <div className="relative w-[22px] h-[22px] bg-blue-700 rounded-full shadow-[rgba(82,151,255,0.5)_0px_0px_20px_0px] overflow-hidden" />
+        
+        {/* Pulsing rings */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[21px] h-[21px] bg-blue-700 rounded-full opacity-50 z-[1]" />
+        
+        {/* Logo */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[42px] z-[1]">
+          <a className="flex items-center justify-center h-full w-[130px] gap-1.5 overflow-hidden">
+            <div className="relative w-[108px] h-[42px]">
+              <img
+                src="https://c.animaapp.com/mkvwf206SqHHjG/assets/dgVEBclaou1On3YT6iSCEOOKkHg.png"
+                alt="Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const DecorativeLines = () => (
+  <>
+    {/* Horizontal line */}
+    <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 h-1 bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] opacity-[0.14] z-0" />
+    
+    {/* Vertical line */}
+    <div className="absolute left-1/2 -translate-x-1/2 inset-y-0 w-1 bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] opacity-[0.14] z-[1]" />
+    
+    {/* Glowing accents */}
+    <div className="absolute left-1/2 top-1/2 -translate-x-[116px] -translate-y-1/2 w-0.5 h-[26px] bg-[linear-gradient(rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-1/2 translate-x-[116px] -translate-y-1/2 w-0.5 h-[26px] bg-[linear-gradient(0deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[116px] h-0.5 w-[26px] bg-[linear-gradient(270deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[116px] h-0.5 w-[26px] bg-[linear-gradient(90deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+  </>
+);
+
 export const IntegrationsList = () => {
   return (
-    <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-      <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-        <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-nowrap h-auto justify-normal gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-[150px] md:flex md:flex-wrap md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-[150px] md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[326px] md:z-[3] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-6 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:px-6 md:py-11 md:scroll-m-0 md:scroll-p-[auto] md:rounded-2xl">
-              <div className="static [align-items:normal] shadow-none box-content caret-black gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto rounded-none md:relative md:content-center md:items-center md:aspect-auto md:shadow-[rgba(0,0,0,0.17)_0px_0.764039px_0.687635px_-0.5px,rgba(0,0,0,0.17)_0px_1.87166px_1.68449px_-1px,rgba(0,0,0,0.17)_0px_3.54652px_3.19187px_-1.5px,rgba(0,0,0,0.16)_0px_6.19129px_5.57216px_-2px,rgba(0,0,0,0.15)_0px_10.7756px_9.69802px_-2.5px,rgba(0,0,0,0.12)_0px_19.7367px_17.7631px_-3px,rgba(0,0,0,0.08)_0px_39px_35.1px_-3.5px,rgba(138,165,255,0.5)_0px_2px_4px_0px_inset] md:box-border md:caret-transparent md:gap-x-6 md:flex md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:p-2 md:scroll-m-0 md:scroll-p-[auto] md:rounded-lg">
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[38px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[35px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-20.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-indigo-400 md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:z-[2] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Lembretes automáticos via WhatsApp para seus pacientes.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[326px] md:z-[3] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-6 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:px-6 md:py-11 md:scroll-m-0 md:scroll-p-[auto] md:rounded-2xl">
-              <div className="static [align-items:normal] shadow-none box-content caret-black gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto rounded-none md:relative md:content-center md:items-center md:aspect-auto md:shadow-[rgba(0,0,0,0.17)_0px_0.764039px_0.687635px_-0.5px,rgba(0,0,0,0.17)_0px_1.87166px_1.68449px_-1px,rgba(0,0,0,0.17)_0px_3.54652px_3.19187px_-1.5px,rgba(0,0,0,0.16)_0px_6.19129px_5.57216px_-2px,rgba(0,0,0,0.15)_0px_10.7756px_9.69802px_-2.5px,rgba(0,0,0,0.12)_0px_19.7367px_17.7631px_-3px,rgba(0,0,0,0.08)_0px_39px_35.1px_-3.5px,rgba(138,165,255,0.5)_0px_2px_4px_0px_inset] md:box-border md:caret-transparent md:gap-x-6 md:flex md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:p-2 md:scroll-m-0 md:scroll-p-[auto] md:rounded-lg">
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[38px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[35px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-21.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-indigo-400 md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:z-[2] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Sincronize agendamentos com Google Agenda e outros
-                  calendários.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[326px] md:z-[3] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-6 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:px-6 md:py-11 md:scroll-m-0 md:scroll-p-[auto] md:rounded-2xl">
-              <div className="static [align-items:normal] shadow-none box-content caret-black gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto rounded-none md:relative md:content-center md:items-center md:aspect-auto md:shadow-[rgba(0,0,0,0.17)_0px_0.764039px_0.687635px_-0.5px,rgba(0,0,0,0.17)_0px_1.87166px_1.68449px_-1px,rgba(0,0,0,0.17)_0px_3.54652px_3.19187px_-1.5px,rgba(0,0,0,0.16)_0px_6.19129px_5.57216px_-2px,rgba(0,0,0,0.15)_0px_10.7756px_9.69802px_-2.5px,rgba(0,0,0,0.12)_0px_19.7367px_17.7631px_-3px,rgba(0,0,0,0.08)_0px_39px_35.1px_-3.5px,rgba(138,165,255,0.5)_0px_2px_4px_0px_inset] md:box-border md:caret-transparent md:gap-x-6 md:flex md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:p-2 md:scroll-m-0 md:scroll-p-[auto] md:rounded-lg">
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[38px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[35px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-22.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-indigo-400 md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:z-[2] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Integre com convênios e sistemas de faturamento TISS
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink min-h-0 min-w-0 w-auto z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[326px] md:z-[3] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-            <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-6 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:[mask-position:0%] md:bg-left-top md:px-6 md:py-11 md:scroll-m-0 md:scroll-p-[auto] md:rounded-2xl">
-              <div className="static [align-items:normal] shadow-none box-content caret-black gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto rounded-none md:relative md:content-center md:items-center md:aspect-auto md:shadow-[rgba(0,0,0,0.17)_0px_0.764039px_0.687635px_-0.5px,rgba(0,0,0,0.17)_0px_1.87166px_1.68449px_-1px,rgba(0,0,0,0.17)_0px_3.54652px_3.19187px_-1.5px,rgba(0,0,0,0.16)_0px_6.19129px_5.57216px_-2px,rgba(0,0,0,0.15)_0px_10.7756px_9.69802px_-2.5px,rgba(0,0,0,0.12)_0px_19.7367px_17.7631px_-3px,rgba(0,0,0,0.08)_0px_39px_35.1px_-3.5px,rgba(138,165,255,0.5)_0px_2px_4px_0px_inset] md:box-border md:caret-transparent md:gap-x-6 md:flex md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:p-2 md:scroll-m-0 md:scroll-p-[auto] md:rounded-lg">
-                <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[38px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[35px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                  <div className="box-content caret-black block md:aspect-auto md:box-border md:caret-transparent md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <img
-                      src="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-23.svg"
-                      alt="Icon"
-                      className="text-black box-content caret-black block shrink h-auto align-middle w-auto md:text-indigo-400 md:aspect-auto md:box-border md:caret-transparent md:inline-block md:shrink-0 md:h-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="static box-content caret-black block flex-row shrink justify-normal min-h-0 min-w-0 w-auto break-normal z-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:flex md:flex-col md:shrink-0 md:justify-start md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:z-[2] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <p className="text-black text-base box-content caret-black tracking-[normal] leading-[normal] min-h-0 min-w-0 text-start break-normal font-times md:text-violet-100/70 md:aspect-auto md:box-border md:caret-transparent md:tracking-[-0.32px] md:leading-[25.6px] md:min-h-[auto] md:min-w-[auto] md:break-words md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">
-                  Connect with Twitter and with dozens of other tools in it
-                  without code
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="static box-content caret-black shrink transform-none z-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:translate-x-[-50.0%] md:translate-y-[-50.0%] md:z-[2] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:left-2/4 md:top-2/4">
-            <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block h-auto justify-normal gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-2.5 md:flex md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:p-7 md:scroll-m-0 md:scroll-p-[auto]">
-              <div className="static [align-items:normal] box-content caret-black gap-x-[normal] block flex-row shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-6 md:flex md:flex-col md:shrink-0 md:h-min md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-6 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <div className="static bg-transparent shadow-none box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto rounded-none md:relative md:aspect-auto md:bg-blue-700 md:shadow-[rgba(82,151,255,0.5)_0px_0px_20px_0px] md:box-border md:caret-transparent md:shrink-0 md:h-[22px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[22px] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[188px]"></div>
-                <div className="static bg-transparent box-content caret-black shrink h-auto opacity-100 w-auto z-auto rounded-none left-auto top-auto md:absolute md:aspect-auto md:bg-blue-700 md:box-border md:caret-transparent md:shrink-0 md:h-[21px] md:left-[calc(50%_-_10.5px)] md:opacity-50 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_10.5px)] md:w-[21px] md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[99px]"></div>
-                <div className="static bg-transparent box-content caret-black shrink h-auto opacity-100 w-auto z-auto rounded-none left-auto top-auto md:absolute md:aspect-auto md:bg-blue-700 md:box-border md:caret-transparent md:shrink-0 md:h-[21px] md:left-[calc(50%_-_10.5px)] md:opacity-50 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_10.5px)] md:w-[21px] md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[99px]"></div>
-                <div className="static bg-transparent box-content caret-black shrink h-auto opacity-100 w-auto z-auto rounded-none left-auto top-auto md:absolute md:aspect-auto md:bg-blue-700 md:box-border md:caret-transparent md:shrink-0 md:h-[21px] md:left-[calc(50%_-_10.5px)] md:opacity-50 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_10.5px)] md:w-[21px] md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-[99px]"></div>
-                <div className="static box-content caret-black shrink h-auto transform-none z-auto left-auto top-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[42px] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:translate-x-[-50.0%] md:translate-y-[-50.0%] md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:left-2/4 md:top-2/4">
-                  <a className="static [align-items:normal] box-content caret-black gap-x-[normal] inline h-auto justify-normal gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:caret-transparent md:gap-x-1.5 md:flex md:h-full md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-1.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[130px] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                    <div className="static box-content caret-black shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:caret-transparent md:shrink-0 md:h-[42px] md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[108px] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                      <div className="static box-content caret-black inset-auto md:absolute md:aspect-auto md:box-border md:caret-transparent md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-0">
-                        <img
-                          src="https://c.animaapp.com/mkvwf206SqHHjG/assets/dgVEBclaou1On3YT6iSCEOOKkHg.png"
-                          alt=""
-                          className="box-content caret-black h-auto object-fill align-middle w-auto md:aspect-[auto_131_/_130] md:box-border md:caret-transparent md:h-full md:object-contain md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]"
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="static bg-none box-content caret-black shrink h-auto opacity-100 z-auto top-auto inset-x-auto md:absolute md:aspect-auto md:bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] md:box-border md:caret-transparent md:shrink-0 md:h-1 md:opacity-[0.14] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_2px)] md:z-0 md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-x-0"></div>
-          <div className="static bg-none box-content caret-black shrink opacity-100 w-auto z-auto left-auto inset-y-auto md:absolute md:aspect-auto md:bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] md:box-border md:caret-transparent md:shrink-0 md:left-[calc(50%_-_2px)] md:opacity-[0.14] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-1 md:z-[1] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-y-0"></div>
-          <div className="static bg-none shadow-none box-content caret-black shrink h-auto opacity-100 transform-none w-auto z-auto left-auto top-auto md:absolute md:aspect-auto md:bg-[linear-gradient(rgb(138,165,255)_0%,rgba(161,117,255,0)_62.1622%)] md:shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] md:box-border md:caret-transparent md:blur-0 md:shrink-0 md:h-[26px] md:left-[calc(50%_-_1px)] md:opacity-[0.510667] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_13px)] md:translate-x-[-116.461px] md:rotate-[-89.0000036453383deg] md:w-0.5 md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:scale-[1.2446695678218216]"></div>
-          <div className="static bg-none shadow-none box-content caret-black shrink h-auto opacity-100 transform-none w-auto z-auto left-auto top-auto md:absolute md:aspect-auto md:bg-[linear-gradient(0deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62.1622%)] md:shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] md:box-border md:caret-transparent md:blur-0 md:shrink-0 md:h-[26px] md:left-[calc(50%_-_1px)] md:opacity-[0.511] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_13px)] md:translate-x-[116.382px] md:rotate-[-89.00000054505949deg] md:w-0.5 md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:scale-[1.2444995431016639]"></div>
-          <div className="static bg-none shadow-none box-content caret-black shrink h-auto opacity-100 transform-none w-auto z-auto left-auto top-auto md:absolute md:aspect-auto md:bg-[linear-gradient(270deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62.1622%)] md:shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] md:box-border md:caret-transparent md:blur-0 md:shrink-0 md:h-0.5 md:left-[calc(50%_-_13px)] md:opacity-[0.511] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_1px)] md:translate-y-[-116.382px] md:rotate-[-89.00000054505949deg] md:w-[26px] md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:scale-[1.2444995431016639]"></div>
-          <div className="static bg-none shadow-none box-content caret-black shrink h-auto opacity-100 transform-none w-auto z-auto left-auto top-auto md:absolute md:aspect-auto md:bg-[linear-gradient(90deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62.1622%)] md:shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] md:box-border md:caret-transparent md:blur-0 md:shrink-0 md:h-0.5 md:left-[calc(50%_-_13px)] md:opacity-[0.511] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:top-[calc(50%_-_1px)] md:translate-y-[116.382px] md:rotate-[-89.00000054505949deg] md:w-[26px] md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:scale-[1.2444995431016639]"></div>
+    <div className="relative w-full">
+      <div className="relative flex flex-wrap items-center justify-center gap-[150px] w-full">
+        {integrations.map((integration, index) => (
+          <IntegrationCard
+            key={index}
+            icon={integration.icon}
+            description={integration.description}
+          />
+        ))}
+        
+        {/* Center element - only visible on md+ */}
+        <div className="hidden md:block">
+          <CenterLogo />
+          <DecorativeLines />
         </div>
       </div>
     </div>
