@@ -1,4 +1,3 @@
-import { Badge } from "@/components/Badge";
 import { FadeIn } from "@/components/FadeIn";
 import { GradientBlob } from "@/components/GradientBlob";
 import { GradientLine } from "@/components/GradientLine";
@@ -29,12 +28,27 @@ export const Pricing = () => {
           <PricingCards />
         </FadeIn>
         <FadeIn direction="up" delay={0.4}>
-          <Badge
-            icon="https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-19.svg"
-            className="max-w-[500px] px-4 py-3 rounded-[211px] z-[3]"
-          >
-            LanderX contributes 5% of subscription to the green life
-          </Badge>
+          <div className="flex flex-col items-center gap-3 z-[3]">
+            <div className="flex items-center gap-2 bg-[radial-gradient(96%_341%_at_50%_7.5%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] border border-indigo-500/30 rounded-full px-5 py-3">
+              <svg
+                className="w-5 h-5 text-indigo-400 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+              <span className="text-violet-100/90 text-sm font-inter tracking-[-0.28px]">
+                <span className="text-white font-semibold">14 dias grátis</span>
+                {" "}para testar — sem cartão de crédito, cancele quando quiser
+              </span>
+            </div>
+          </div>
         </FadeIn>
       </SectionContainer>
       <GradientLine />

@@ -51,6 +51,7 @@ export const PricingCards = () => {
           features={plan.features}
           highlighted={plan.highlighted}
           badge={plan.badge}
+          ctaText="Testar 14 Dias Grátis"
           ctaHref="#"
         />
       ))}

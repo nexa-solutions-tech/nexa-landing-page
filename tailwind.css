@@ -86,3 +86,128 @@
       "calt" 1;
   }
 }
+
+/* Integration lines pulse animations */
+/* Logo is 108x42. Orbs are 120px. Orbs anchored at top-left corner at center (left:50%,top:50%).
+   RIGHT: starts at +54px (logo right edge). OK — orb extends rightward.
+   LEFT: starts at -54px - 120px = -174px so right edge of orb touches logo left edge.
+   DOWN: starts at +24px (logo bottom edge). OK — orb extends downward.
+   UP: starts at -24px - 120px = -144px so bottom edge of orb touches logo top edge. */
+
+@keyframes pulse-line-right {
+  0% {
+    transform: translateY(-50%) translateX(14px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-50%) translateX(min(500px, 45vw));
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-line-left {
+  0% {
+    transform: translateY(-50%) translateX(-134px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-50%) translateX(max(-620px, -45vw));
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-line-down {
+  0% {
+    transform: translateX(-50%) translateY(14px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-50%) translateY(280px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-line-up {
+  0% {
+    transform: translateX(-50%) translateY(-134px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-400px);
+    opacity: 0;
+  }
+}
+
+@keyframes center-ring-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes center-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(82, 151, 255, 0.4), 0 0 40px rgba(82, 151, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(82, 151, 255, 0.8), 0 0 70px rgba(82, 151, 255, 0.35), 0 0 100px rgba(82, 151, 255, 0.1);
+  }
+}
+
+/* AIEfficiency Orb animations */
+
+/* Continuous radar sweep rotation — 8s full cycle */
+@keyframes orb-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Concentric circle rings — subtle breathing pulse */
+@keyframes orb-ring-pulse {
+  0%, 100% {
+    opacity: 0.01;
+    border-color: rgba(255, 255, 255, 0.01);
+  }
+  40% {
+    opacity: 0.06;
+    border-color: rgba(138, 165, 255, 0.12);
+  }
+  60% {
+    opacity: 0.04;
+    border-color: rgba(138, 165, 255, 0.08);
+  }
+}
+
+/* Floating icon — fades in/out */
+@keyframes orb-icon-pulse {
+  0%, 100% { opacity: 0.01; }
+  50% { opacity: 0.08; }
+}

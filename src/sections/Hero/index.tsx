@@ -3,82 +3,91 @@ import { HeroCTAButtons } from "@/sections/Hero/components/HeroCTAButtons";
 import { HeroDescription } from "@/sections/Hero/components/HeroDescription";
 import { HeroHeading } from "@/sections/Hero/components/HeroHeading";
 import { HeroLogos } from "@/sections/Hero/components/HeroLogos";
+import type { LucideIcon } from "lucide-react";
+import { Award, BarChart3, BrainCircuit, TrendingUp } from "lucide-react";
 
-const VERIFIED_ICON_URL =
-  "https://c.animaapp.com/mkvwf206SqHHjG/assets/pJ14Zm6fSChKb3riNPqdMYdzpDM.svg";
 
-const userBadges = [
-  {
-    name: "LanderX",
-    avatar:
-      "https://c.animaapp.com/mkvwf206SqHHjG/assets/hB5bi4QrUW6ADBo4x4YHYj1FyyY.svg",
-    position: "left-0 top-0",
-  },
-  {
-    name: "Crystalio",
-    avatar:
-      "https://c.animaapp.com/mkvwf206SqHHjG/assets/AtXPNff5LTVvIV6wxVjP76Wnvc.svg",
-    position: "right-0 bottom-0",
-  },
-];
-
-interface UserBadgeProps {
-  name: string;
-  avatar: string;
-  position: string;
+interface HighlightCardProps {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  iconColor: string;
+  glowColor: string;
+  stat: string;
+  statLabel: string;
 }
 
-const UserBadge = ({ name, avatar, position }: UserBadgeProps) => (
-  <div
-    className={`hidden md:flex absolute items-center gap-2 bg-zinc-900 p-4 rounded-xl w-min border border-neutral-800 ${position}`}
-  >
-    <div className="relative bg-zinc-700 h-8 w-8 overflow-hidden rounded">
-      <img
-        src={avatar}
-        alt={`${name} avatar`}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-    </div>
-    <p className="text-white font-medium leading-5 whitespace-nowrap font-inter">
-      {name}
-    </p>
-    <div className="relative w-4 h-4 overflow-hidden">
-      <img
-        src={VERIFIED_ICON_URL}
-        alt="Verified"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-    </div>
-  </div>
-);
+const HighlightCard = ({ title, description, icon: Icon, iconColor, glowColor, stat, statLabel }: HighlightCardProps) => (
+  <div className="relative flex flex-col items-start gap-5 w-full p-7 rounded-2xl md:basis-0 md:grow md:min-w-[240px] overflow-hidden group cursor-default">
+    {/* Background */}
+    <div className="absolute inset-0 bg-[radial-gradient(96%_96%_at_50%_7.5%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] rounded-2xl border border-neutral-800 group-hover:border-neutral-600 transition-colors duration-300" />
 
-const UserBadgesPreview = () => (
-  <div className="relative h-[168px] w-[294px] z-[3]">
-    <div className="relative h-full w-full">
-      {userBadges.map((badge) => (
-        <UserBadge key={badge.name} {...badge} />
-      ))}
+    {/* Glow top */}
+    <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px ${glowColor} opacity-60`} />
+
+    {/* Icon container */}
+    <div className="relative z-[2] flex items-center justify-center">
+      <div className={`flex items-center justify-center w-12 h-12 rounded-xl border border-neutral-700 bg-neutral-900 ${iconColor}`}>
+        <Icon size={22} strokeWidth={1.5} />
+      </div>
     </div>
-  </div>
-);
 
-const HighlightCard = () => (
-  <div className="relative flex flex-col items-center gap-6 w-full p-8 rounded-2xl md:basis-0 md:grow md:min-w-[300px] md:w-px">
-    <div className="absolute bg-[radial-gradient(96%_96%_at_50%_7.5%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] z-[3] overflow-hidden rounded-2xl inset-0" />
-
-    <div className="relative flex flex-col gap-4 max-w-[540px] w-full z-[3] overflow-hidden">
-      <h3 className="text-white text-2xl font-medium tracking-[-0.48px] leading-7 font-inter">
-        Destaque sua Clínica
+    {/* Text */}
+    <div className="relative flex flex-col gap-2 w-full z-[2]">
+      <h3 className="text-white text-base font-semibold tracking-[-0.3px] leading-6 font-inter">
+        {title}
       </h3>
-      <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-left font-inter max-w-[440px]">
-        Eleve sua clínica com gestão profissional e conecte-se com pacientes de
-        forma eficiente.
+      <p className="text-neutral-400 text-sm tracking-[-0.2px] leading-[22px] text-left font-inter">
+        {description}
       </p>
     </div>
 
-    <UserBadgesPreview />
+    {/* Stat badge */}
+    <div className="relative z-[2] flex items-baseline gap-1.5 mt-auto pt-2 border-t border-neutral-800 w-full">
+      <span className={`text-lg font-bold font-inter ${iconColor}`}>{stat}</span>
+      <span className="text-neutral-500 text-xs font-inter">{statLabel}</span>
+    </div>
   </div>
 );
+
+const highlightCards = [
+  {
+    title: "Destaque-se",
+    description: "Dê destaque à sua clínica com um perfil premium e conecte-se com os melhores profissionais da saúde.",
+    icon: Award,
+    iconColor: "text-yellow-400",
+    glowColor: "bg-gradient-to-r from-transparent via-yellow-500 to-transparent",
+    stat: "3x",
+    statLabel: "mais visibilidade",
+  },
+  {
+    title: "Gestão Inteligente",
+    description: "Automatize agendamentos e prontuários com análise de desempenho em tempo real e monitoramento de receitas.",
+    icon: BrainCircuit,
+    iconColor: "text-violet-400",
+    glowColor: "bg-gradient-to-r from-transparent via-violet-500 to-transparent",
+    stat: "80%",
+    statLabel: "menos tarefas manuais",
+  },
+  {
+    title: "Decisões por Dados",
+    description: "Seu guia analítico para tomar decisões estratégicas e melhorar a qualidade do atendimento na sua clínica.",
+    icon: BarChart3,
+    iconColor: "text-blue-400",
+    glowColor: "bg-gradient-to-r from-transparent via-blue-500 to-transparent",
+    stat: "100+",
+    statLabel: "métricas em tempo real",
+  },
+  {
+    title: "Aumente o Faturamento",
+    description: "Converta mais pacientes com estratégias direcionadas, lembretes automáticos e ferramentas de marketing.",
+    icon: TrendingUp,
+    iconColor: "text-emerald-400",
+    glowColor: "bg-gradient-to-r from-transparent via-emerald-500 to-transparent",
+    stat: "+40%",
+    statLabel: "de receita média",
+  },
+];
 
 export const Hero = () => {
   return (
@@ -94,8 +103,10 @@ export const Hero = () => {
       </div>
 
       <section className="relative flex flex-col items-center justify-center gap-6 max-w-[1200px] w-full z-[2] scroll-mt-[100px]">
-        <div className="relative flex flex-col md:flex-row flex-wrap items-start justify-center gap-6 w-full">
-          <HighlightCard />
+        <div className="relative flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-6 w-full">
+          {highlightCards.map((card) => (
+            <HighlightCard key={card.title} {...card} />
+          ))}
         </div>
       </section>
     </section>

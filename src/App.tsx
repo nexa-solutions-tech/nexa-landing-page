@@ -9,6 +9,7 @@ import { Hero } from "@/sections/Hero";
 import { Integrations } from "@/sections/Integrations";
 import { Navbar } from "@/sections/Navbar";
 import { Pricing } from "@/sections/Pricing";
+import { Stats } from "@/sections/Stats";
 import { Testimonials } from "@/sections/Testimonials";
 
 export const App = () => {
@@ -22,6 +23,7 @@ export const App = () => {
         <Hero />
         <BenefitsSection />
         <Testimonials />
+        <Stats />
         <Pricing />
         <FoundersNote />
         <Integrations />

@@ -20,9 +20,11 @@ const integrations = [
 const IntegrationCard = ({
   icon,
   description,
+  index,
 }: {
   icon: string;
   description: string;
+  index: number;
 }) => (
   <div className="relative w-full md:w-[326px] z-[3]">
     <div className="flex flex-col items-center justify-center gap-6 px-6 py-11 rounded-2xl">
@@ -43,15 +45,26 @@ const IntegrationCard = ({
 );
 
 const CenterLogo = () => (
-  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]">
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(50%+20px)] z-[2]">
     <div className="flex items-center justify-center gap-2.5 p-7">
       <div className="flex flex-col items-center justify-center gap-6">
-        {/* Glowing dot */}
-        <div className="relative w-[22px] h-[22px] bg-blue-700 rounded-full shadow-[rgba(82,151,255,0.5)_0px_0px_20px_0px] overflow-hidden" />
-        
-        {/* Pulsing rings */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[21px] h-[21px] bg-blue-700 rounded-full opacity-50 z-[1]" />
-        
+        {/* Glowing dot with animated pulse */}
+        <div
+          className="relative w-[22px] h-[32px] bg-blue-600 rounded-full overflow-hidden"
+          style={{ animation: 'center-glow-pulse 3s ease-in-out infinite' }}
+        />
+
+        {/* Expanding pulse rings */}
+        {[0, 1, 2].map((i) => (
+          <div
+            key={`ring-${i}`}
+            className="absolute left-1/2 top-1/2 w-[22px] h-[22px] rounded-full border border-blue-500/40 pointer-events-none"
+            style={{
+              animation: `center-ring-pulse 3s ease-out ${i * 1}s infinite`,
+            }}
+          />
+        ))}
+
         {/* Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[42px] z-[1]">
           <a className="flex items-center justify-center h-full w-[130px] gap-1.5 overflow-hidden">
@@ -69,31 +82,76 @@ const CenterLogo = () => (
   </div>
 );
 
+const PULSE_DURATION = '4.5s';
+const PULSE_BG_H = 'linear-gradient(90deg, transparent 0%, rgba(138,165,255,0.15) 15%, rgba(138,165,255,0.9) 50%, rgba(138,165,255,0.15) 85%, transparent 100%)';
+const PULSE_BG_V = 'linear-gradient(180deg, transparent 0%, rgba(138,165,255,0.15) 15%, rgba(138,165,255,0.9) 50%, rgba(138,165,255,0.15) 85%, transparent 100%)';
+const PULSE_SHADOW = '0 0 1px 0px rgba(138,165,255,0.25)';
+
 const DecorativeLines = () => (
   <>
-    {/* Horizontal line */}
-    <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 h-1 bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] opacity-[0.14] z-0" />
-    
-    {/* Vertical line */}
-    <div className="absolute left-1/2 -translate-x-1/2 inset-y-0 w-1 bg-[radial-gradient(63.6719%_63.6719%_at_50%_50%,rgb(138,165,255)_0%,rgb(0,0,0)_100%)] opacity-[0.14] z-[1]" />
-    
-    {/* Glowing accents */}
-    <div className="absolute left-1/2 top-1/2 -translate-x-[116px] -translate-y-1/2 w-0.5 h-[26px] bg-[linear-gradient(rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
-    <div className="absolute left-1/2 top-1/2 translate-x-[116px] -translate-y-1/2 w-0.5 h-[26px] bg-[linear-gradient(0deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[116px] h-0.5 w-[26px] bg-[linear-gradient(270deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[116px] h-0.5 w-[26px] bg-[linear-gradient(90deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    {/* Static base lines */}
+    <div className="absolute top-1/2 -translate-y-[calc(50%+20px)] inset-x-0 h-[2px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(138,165,255,0.35)_0%,rgba(138,165,255,0.08)_70%,transparent_100%)] z-0" />
+    <div className="absolute left-1/2 -translate-x-1/2 inset-y-0 w-[2px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(138,165,255,0.35)_0%,rgba(138,165,255,0.08)_70%,transparent_100%)] z-0" />
+
+    {/* Pulse orb — RIGHT */}
+    <div
+      className="absolute left-1/2 top-[calc(50%-20px)] w-[120px] h-[2px] rounded-full z-[1]"
+      style={{
+        background: PULSE_BG_H,
+        boxShadow: PULSE_SHADOW,
+        animation: `pulse-line-right ${PULSE_DURATION} linear infinite`,
+      }}
+    />
+
+    {/* Pulse orb — LEFT */}
+    <div
+      className="absolute left-1/2 top-[calc(50%-20px)] w-[120px] h-[2px] rounded-full z-[1]"
+      style={{
+        background: PULSE_BG_H,
+        boxShadow: PULSE_SHADOW,
+        animation: `pulse-line-left ${PULSE_DURATION} linear infinite`,
+      }}
+    />
+
+    {/* Pulse orb — DOWN */}
+    <div
+      className="absolute left-1/2 top-[calc(50%-20px)] h-[120px] w-[2px] rounded-full z-[1]"
+      style={{
+        background: PULSE_BG_V,
+        boxShadow: PULSE_SHADOW,
+        animation: `pulse-line-down ${PULSE_DURATION} linear infinite`,
+      }}
+    />
+
+    {/* Pulse orb — UP */}
+    <div
+      className="absolute left-1/2 top-[calc(50%-20px)] h-[120px] w-[2px] rounded-full z-[1]"
+      style={{
+        background: PULSE_BG_V,
+        boxShadow: PULSE_SHADOW,
+        animation: `pulse-line-up ${PULSE_DURATION} linear infinite`,
+      }}
+    />
+
+    {/* Glowing accents at intersection points */}
+    <div className="absolute left-1/2 top-[calc(50%-20px)] -translate-x-[116px] -translate-y-1/2 w-0.5 bg-[linear-gradient(rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-[calc(50%-20px)] translate-x-[116px] -translate-y-1/2 w-0.5 bg-[linear-gradient(0deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-[calc(50%-20px)] -translate-x-1/2 -translate-y-[116px] w-[26px] bg-[linear-gradient(270deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+    <div className="absolute left-1/2 top-[calc(50%-20px)] -translate-x-1/2 translate-y-[116px] w-[26px] bg-[linear-gradient(90deg,rgb(138,165,255)_0%,rgba(161,117,255,0)_62%)] shadow-[rgba(184,156,255,0.34)_0px_0px_96px_3px] opacity-50 rotate-[-89deg] z-[1]" />
+
   </>
 );
 
 export const IntegrationsList = () => {
   return (
-    <div className="relative w-full">
-      <div className="relative flex flex-wrap items-center justify-center gap-[150px] w-full">
+    <div className="relative w-full overflow-hidden">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-[30px] gap-x-[150px] w-full max-w-[800px] mx-auto overflow-hidden">
         {integrations.map((integration, index) => (
           <IntegrationCard
             key={index}
             icon={integration.icon}
             description={integration.description}
+            index={index}
           />
         ))}
         
