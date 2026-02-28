@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   publicDir: "./static",
-  base: "/nexa-landing-page/",
+  base: "/",
   css: { postcss: { plugins: [tailwind()] } },
   resolve: { alias: { "@": path.resolve(__dirname, "src") } },
 });
