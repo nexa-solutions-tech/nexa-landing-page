@@ -14,7 +14,7 @@ export const Comparison = () => {
         <FadeIn direction="up">
           <SectionHeader
             badge={<ComparisonHeader />}
-            title="Por que o FisioClinic se Destaca"
+            title="Por que o NexaClinic se Destaca"
             description="Veja como nos comparamos em performance e crescimento"
             maxDescriptionWidth="none"
             className="z-[3]"

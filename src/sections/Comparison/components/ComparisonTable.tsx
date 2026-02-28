@@ -1,5 +1,5 @@
-// Features for FisioClinic (positive)
-const fisioClinicFeatures = [
+// Features for NexaClinic (positive)
+const nexaClinicFeatures = [
   "Colaboração fácil entre profissionais",
   "Análise de dados integrada",
   "Automação de processos",
@@ -56,14 +56,14 @@ const ComparisonCard = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-// Column header for FisioClinic
-const FisioClinicHeader = () => (
+// Column header for NexaClinic
+const NexaClinicHeader = () => (
   <div className="flex items-center justify-center h-[62px] w-full overflow-hidden">
     <a className="flex items-center gap-1.5 h-9 w-[130px] overflow-hidden">
       <div className="relative h-[34px] w-[118px]">
         <img
           src="https://c.animaapp.com/mkvwf206SqHHjG/assets/FbO4dnbdmZd5UO3ULm6CTPenvIo.png"
-          alt="FisioClinic Logo"
+          alt="NexaClinic Logo"
           className="h-full w-full object-contain"
         />
       </div>
@@ -88,14 +88,14 @@ const OthersHeader = () => (
 export const ComparisonTable = () => {
   return (
     <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 w-full max-w-[1000px] mx-auto">
-      {/* FisioClinic Column */}
+      {/* NexaClinic Column */}
       <div className="flex flex-col items-center gap-2 w-full md:flex-1 md:min-w-[350px]">
-        <FisioClinicHeader />
+        <NexaClinicHeader />
         <ComparisonCard>
-          {fisioClinicFeatures.map((feature, index) => (
+          {nexaClinicFeatures.map((feature, index) => (
             <div key={index} className="w-full">
               <FeatureItem text={feature} isPositive />
-              {index < fisioClinicFeatures.length - 1 && <FeatureDivider />}
+              {index < nexaClinicFeatures.length - 1 && <FeatureDivider />}
             </div>
           ))}
         </ComparisonCard>

@@ -2,9 +2,9 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "O que é o FisioClinic?",
+    question: "O que é o NexaClinic?",
     answer:
-      "O FisioClinic é uma plataforma completa de gestão para clínicas de fisioterapia. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
+      "O NexaClinic é uma plataforma completa de gestão para clínicas de fisioterapia. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
   },
   {
     question: "Posso integrar com convênios e planos de saúde?",
@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "O sistema funciona em dispositivos móveis?",
     answer:
-      "Sim! O FisioClinic é 100% responsivo e funciona perfeitamente em celulares e tablets, permitindo que você acesse de qualquer lugar.",
+      "Sim! O NexaClinic é 100% responsivo e funciona perfeitamente em celulares e tablets, permitindo que você acesse de qualquer lugar.",
   },
 ];
 

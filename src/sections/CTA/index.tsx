@@ -17,7 +17,7 @@ const PreviewImage = () => (
     <div className="relative grow h-full w-px">
       <img
         src={PREVIEW_IMAGE_URL}
-        alt="FisioClinic Preview"
+        alt="NexaClinic Preview"
         className="absolute inset-0 h-full object-cover w-full"
       />
     </div>

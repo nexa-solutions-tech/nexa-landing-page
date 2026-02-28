@@ -17,7 +17,7 @@ export const Stats = () => {
           <SectionHeader
             badge={<StatsHeader />}
             title="Números que Falam por Si"
-            description="Milhares de clínicas já transformaram sua gestão com o FisioClinic"
+            description="Milhares de clínicas já transformaram sua gestão com o NexaClinic"
             className="z-[3]"
           />
         </FadeIn>

@@ -20,7 +20,7 @@ export const FoundersNote = () => {
               "Sabemos que você não estudou anos para ficar preso em
               planilhas.{" "}
               <span className="text-indigo-400">
-                Criamos o FisioClinic para que você volte a focar no que
+                Criamos o NexaClinic para que você volte a focar no que
                 realmente importa: seus pacientes.
               </span>
               "
@@ -34,7 +34,7 @@ export const FoundersNote = () => {
                 />
               </div>
               <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] font-inter whitespace-nowrap">
-                Equipe FisioClinic
+                Equipe NexaClinic
               </p>
             </div>
           </div>
