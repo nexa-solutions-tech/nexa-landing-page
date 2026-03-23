@@ -38,7 +38,7 @@ export const DesktopMenu = () => {
         ))}
       </nav>
 
-      <Button href="https://framer.link/DX0edsv" variant="secondary">
+      <Button href="/cadastro" variant="secondary">
         Testar Grátis
       </Button>
     </div>
