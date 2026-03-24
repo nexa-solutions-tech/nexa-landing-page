@@ -1,112 +1,56 @@
 import { FadeIn, GradientBlob, LightRays, SectionBadge } from "@/components";
-import { AnimatePresence, motion } from "framer-motion";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { Clock, CreditCard, Loader2, Shield, Star, Users } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { Step1Clinica } from "./components/Step1Clinica";
-import { Step2Acesso } from "./components/Step2Acesso";
-import { StepIndicator } from "./components/StepIndicator";
+import { FormInput } from "./components/FormInput";
 import { SuccessScreen } from "./components/SuccessScreen";
-import type { FormData, FormErrors, SuccessData } from "./types";
+import {
+  cadastroSchema,
+  type CadastroFormData,
+  type CadastroPayload,
+  type SuccessData,
+} from "./types";
 import { registerClinica } from "./utils/api";
-import { isValidCnpj } from "./utils/cnpj";
-
-const INITIAL_FORM: FormData = {
-  nomeClinica: "",
-  cnpj: "",
-  especialidade: "",
-  faixaProfissionais: "",
-  telefone: "",
-  adminNome: "",
-  adminEmail: "",
-  adminSenha: "",
-};
-
-function validateStep1(data: FormData): FormErrors {
-  const errors: FormErrors = {};
-  if (!data.nomeClinica.trim() || data.nomeClinica.trim().length < 2) {
-    errors.nomeClinica = "Nome da clínica é obrigatório (mínimo 2 caracteres)";
-  }
-  if (!data.cnpj.trim()) {
-    errors.cnpj = "CNPJ é obrigatório";
-  } else if (!isValidCnpj(data.cnpj)) {
-    errors.cnpj = "CNPJ inválido — informe os 14 dígitos";
-  }
-  return errors;
-}
-
-function validateStep2(data: FormData): FormErrors {
-  const errors: FormErrors = {};
-  if (!data.adminNome.trim()) {
-    errors.adminNome = "Nome é obrigatório";
-  }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!data.adminEmail.trim()) {
-    errors.adminEmail = "E-mail é obrigatório";
-  } else if (!emailRegex.test(data.adminEmail)) {
-    errors.adminEmail = "E-mail inválido";
-  }
-  if (!data.adminSenha) {
-    errors.adminSenha = "Senha é obrigatória";
-  } else if (data.adminSenha.length < 8) {
-    errors.adminSenha = "Senha deve ter pelo menos 8 caracteres";
-  }
-  return errors;
-}
+import { maskCnpj } from "./utils/cnpj";
 
 export const CadastroPage = () => {
-  const [step, setStep] = useState<1 | 2>(1);
-  const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isLoading, setIsLoading] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
   const [successData, setSuccessData] = useState<SuccessData | null>(null);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const handleChange = (field: keyof FormData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field as keyof FormErrors]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
-    }
-  };
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors, isSubmitting },
+  } = useForm<CadastroFormData>({
+    resolver: zodResolver(cadastroSchema),
+    defaultValues: {
+      adminNome: "",
+      adminEmail: "",
+      nomeClinica: "",
+      cnpj: "",
+      adminSenha: "",
+    },
+  });
 
-  const handleNext = () => {
-    const errs = validateStep1(formData);
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
-    setErrors({});
-    setStep(2);
-  };
-
-  const handleBack = () => {
-    setErrors({});
+  const onSubmit = async (data: CadastroPayload) => {
     setApiError(null);
-    setStep(1);
-  };
-
-  const handleSubmit = async () => {
-    const errs = validateStep2(formData);
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
-    setErrors({});
-    setApiError(null);
-    setIsLoading(true);
     try {
-      const result = await registerClinica(formData);
+      const result = await registerClinica(data);
       setSuccessData(result);
     } catch (err) {
       setApiError(
         err instanceof Error ? err.message : "Erro inesperado. Tente novamente."
       );
-    } finally {
-      setIsLoading(false);
     }
   };
 
   return (
-    <div className="relative min-h-screen bg-black text-white font-inter">
+    <div className={`relative bg-black text-white font-inter ${successData ? "h-screen overflow-hidden" : "min-h-screen"}`}>
       {/* Background decorations */}
       <LightRays topOffset="-600px" />
       <GradientBlob className="top-0 bottom-auto" />
@@ -130,7 +74,7 @@ export const CadastroPage = () => {
       {/* Main content */}
       <main className="relative flex flex-col items-center pt-[100px] pb-16 px-[18px]">
         <FadeIn direction="up" className="w-full flex justify-center">
-          <div className="w-full max-w-[480px] flex flex-col gap-6">
+          <div className="w-full max-w-[480px] md:max-w-[600px] flex flex-col gap-4">
 
             {!successData ? (
               <>
@@ -138,47 +82,132 @@ export const CadastroPage = () => {
                 <div className="flex flex-col items-center gap-3 text-center">
                   <SectionBadge>14 dias grátis · Sem cartão de crédito</SectionBadge>
                   <h1 className="text-3xl md:text-4xl font-semibold font-inter tracking-tight text-white">
-                    Crie sua conta
+                    Comece seu teste gratuito
                   </h1>
                   <p className="text-neutral-400 text-sm font-inter">
-                    Acesso completo a todas as funcionalidades. Cancele quando quiser.
+                    Acesso completo por 14 dias. Sem compromisso, cancele a qualquer momento.
                   </p>
                 </div>
 
-                {/* Step indicator */}
-                <StepIndicator currentStep={step} />
-
-                {/* Form card with animated step transition */}
-                <div className="relative p-px rounded-2xl bg-[linear-gradient(180deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] w-full">
+                {/* Form card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="relative p-px rounded-2xl bg-[linear-gradient(180deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] w-full"
+                >
                   <div className="rounded-2xl bg-[radial-gradient(96%_96%_at_49.3%_-25.1%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] p-8 w-full">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={step}
-                        initial={{ opacity: 0, x: step === 2 ? 24 : -24 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: step === 2 ? -24 : 24 }}
-                        transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
-                        className="w-full"
+                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 w-full">
+
+                      {/* Section: Seus dados */}
+                      <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter">
+                        Seus dados
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <FormInput
+                          id="adminNome"
+                          label="Seu nome"
+                          registration={register("adminNome")}
+                          error={errors.adminNome?.message}
+                          placeholder="João Silva"
+                        />
+
+                        <FormInput
+                          id="adminEmail"
+                          label="E-mail"
+                          type="email"
+                          registration={register("adminEmail")}
+                          error={errors.adminEmail?.message}
+                          placeholder="joao@clinica.com.br"
+                        />
+                      </div>
+
+                      {/* Section: Sua clínica */}
+                      <div className="border-t border-neutral-800 pt-5 mt-1">
+                        <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter mb-5">
+                          Sua clínica
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                          <FormInput
+                            id="nomeClinica"
+                            label="Nome da clínica"
+                            registration={register("nomeClinica")}
+                            error={errors.nomeClinica?.message}
+                            placeholder="Ex: Clínica São Paulo"
+                          />
+
+                          <FormInput
+                            id="cnpj"
+                            label="CNPJ"
+                            registration={{
+                              ...register("cnpj"),
+                              onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+                                setValue("cnpj", maskCnpj(e.target.value), {
+                                  shouldValidate: !!errors.cnpj,
+                                });
+                              },
+                            }}
+                            error={errors.cnpj?.message}
+                            placeholder="00.000.000/0000-00"
+                            hint="Você pode adicionar depois"
+                            optional
+                          />
+                        </div>
+                      </div>
+
+                      {/* Section: Segurança */}
+                      <div className="border-t border-neutral-800 pt-5 mt-1">
+                        <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter mb-5">
+                          Segurança
+                        </p>
+
+                        <FormInput
+                          id="adminSenha"
+                          label="Senha"
+                          registration={register("adminSenha")}
+                          error={errors.adminSenha?.message}
+                          placeholder="Mínimo 8 caracteres"
+                          hint="Mínimo 8 caracteres"
+                          showPasswordToggle
+                          passwordVisible={passwordVisible}
+                          onTogglePassword={() => setPasswordVisible((prev) => !prev)}
+                        />
+                      </div>
+
+                      {/* CTA Button */}
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="flex items-center justify-center gap-2 w-full mt-2 px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed text-white text-sm font-semibold font-inter transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_28px_rgba(99,102,241,0.45)]"
                       >
-                        {step === 1 ? (
-                          <Step1Clinica
-                            data={formData}
-                            errors={errors}
-                            onChange={handleChange}
-                            onNext={handleNext}
-                          />
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 size={16} className="animate-spin" />
+                            Preparando sua clínica…
+                          </>
                         ) : (
-                          <Step2Acesso
-                            data={formData}
-                            errors={errors}
-                            onChange={handleChange}
-                            onBack={handleBack}
-                            onSubmit={handleSubmit}
-                            isLoading={isLoading}
-                          />
+                          "Começar meu teste gratuito"
                         )}
-                      </motion.div>
-                    </AnimatePresence>
+                      </button>
+
+                      {/* Trust signals */}
+                      <div className="flex items-center justify-center gap-4 flex-wrap">
+                        <span className="flex items-center gap-1.5 text-xs text-neutral-500">
+                          <Shield size={13} />
+                          Dados protegidos
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs text-neutral-500">
+                          <Clock size={13} />
+                          Setup em 2 minutos
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs text-neutral-500">
+                          <CreditCard size={13} />
+                          Sem cartão necessário
+                        </span>
+                      </div>
+                    </form>
 
                     {apiError && (
                       <motion.div
@@ -191,6 +220,26 @@ export const CadastroPage = () => {
                         </p>
                       </motion.div>
                     )}
+                  </div>
+                </motion.div>
+
+                {/* Social proof */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm">
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/15">
+                      <Users className="w-3.5 h-3.5 text-emerald-400" />
+                    </div>
+                    <span className="text-sm font-medium text-neutral-300 font-inter">
+                      +200 clínicas já confiam na Nexa
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                    <span className="text-xs text-neutral-500 ml-1.5 font-inter">
+                      4.9/5 de satisfação
+                    </span>
                   </div>
                 </div>
 

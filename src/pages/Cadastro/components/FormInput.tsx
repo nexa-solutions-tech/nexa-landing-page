@@ -1,10 +1,12 @@
 import { Eye, EyeOff } from "lucide-react";
+import type { UseFormRegisterReturn } from "react-hook-form";
 
 interface FormInputProps {
   id: string;
   label: string;
-  value: string;
-  onChange: (value: string) => void;
+  registration?: UseFormRegisterReturn;
+  value?: string;
+  onChange?: (value: string) => void;
   error?: string;
   type?: "text" | "email" | "password";
   placeholder?: string;
@@ -19,6 +21,7 @@ interface FormInputProps {
 export const FormInput = ({
   id,
   label,
+  registration,
   value,
   onChange,
   error,
@@ -32,6 +35,10 @@ export const FormInput = ({
   optional = false,
 }: FormInputProps) => {
   const inputType = showPasswordToggle ? (passwordVisible ? "text" : "password") : type;
+
+  const inputProps = registration
+    ? { ...registration }
+    : { value, onChange: (e: React.ChangeEvent<HTMLInputElement>) => onChange?.(e.target.value) };
 
   return (
     <div className="flex flex-col gap-1.5 w-full">
@@ -51,8 +58,6 @@ export const FormInput = ({
         <input
           id={id}
           type={inputType}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           disabled={disabled}
           autoComplete={type === "email" ? "email" : type === "password" ? "new-password" : "off"}
@@ -68,6 +73,7 @@ export const FormInput = ({
           ]
             .filter(Boolean)
             .join(" ")}
+          {...inputProps}
         />
 
         {showPasswordToggle && (

@@ -1,9 +1,9 @@
-import type { FormData, SuccessData } from "../types";
+import type { CadastroPayload, SuccessData } from "../types";
 
-export async function registerClinica(data: FormData): Promise<SuccessData> {
+export async function registerClinica(data: CadastroPayload): Promise<SuccessData> {
   const payload = {
     ...data,
-    cnpj: data.cnpj.replace(/\D/g, ""),
+    cnpj: data.cnpj?.replace(/\D/g, "") ?? null,
   };
 
   const response = await fetch("http://localhost:8080/api/cadastro", {

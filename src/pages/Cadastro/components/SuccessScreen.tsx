@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarDays, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { SuccessData } from "../types";
 
@@ -62,7 +62,7 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
       <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-indigo-600/10 border border-indigo-500/20 w-full">
         <CalendarDays size={18} className="text-indigo-400 shrink-0" />
         <p className="text-sm font-inter text-left">
-          <span className="text-neutral-400">Trial gratuito até: </span>
+          <span className="text-neutral-400">Teste gratuito até: </span>
           <span className="text-white font-semibold">{trialDate}</span>
         </p>
       </div>
@@ -79,9 +79,10 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
       {/* Back link */}
       <Link
         to="/"
-        className="text-sm text-neutral-500 hover:text-neutral-300 transition-colors underline underline-offset-2 font-inter"
+        className="group flex items-center justify-center gap-2 w-full px-6 py-3 rounded-xl border border-neutral-800 hover:border-neutral-600 bg-white/[0.03] hover:bg-white/[0.06] text-neutral-400 hover:text-white text-sm font-medium font-inter transition-all duration-200"
       >
-        ← Voltar à página inicial
+        <ArrowLeft size={15} className="transition-transform group-hover:-translate-x-0.5" />
+        Voltar à página inicial
       </Link>
     </motion.div>
   );
