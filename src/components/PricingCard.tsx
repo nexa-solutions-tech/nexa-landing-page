@@ -22,6 +22,8 @@ interface PricingCardProps {
   features: string[];
   ctaText?: string;
   ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
   highlighted?: boolean;
   badge?: string;
 }
@@ -33,6 +35,8 @@ export const PricingCard = ({
   features,
   ctaText = "Começar Agora",
   ctaHref = "#",
+  secondaryCtaText,
+  secondaryCtaHref,
   highlighted = false,
   badge,
 }: PricingCardProps) => {
@@ -72,19 +76,29 @@ export const PricingCard = ({
             </div>
           </div>
 
-          {/* CTA Button */}
-          <a
-            href={ctaHref}
-            className={`flex items-center justify-center w-full px-[18px] py-2.5 rounded-[10px] backdrop-blur-[2.5px] overflow-hidden transition-all ${
-              highlighted
-                ? "bg-indigo-600 hover:bg-indigo-500 shadow-[rgba(255,255,255,0.1)_0px_0px_10px_1px_inset,rgba(99,102,241,0.3)_0px_0px_0px_1px]"
-                : "bg-blue-950 hover:bg-blue-900 shadow-[rgba(255,255,255,0)_0px_0px_10px_1px_inset,rgba(0,85,255,0.12)_0px_0px_0px_1px]"
-            }`}
-          >
-            <p className="text-white text-base tracking-[-0.32px] leading-[25.6px] font-inter">
-              {ctaText}
-            </p>
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-col gap-2 w-full">
+            <a
+              href={ctaHref}
+              className={`flex items-center justify-center w-full px-[18px] py-2.5 rounded-[10px] backdrop-blur-[2.5px] overflow-hidden transition-all ${
+                highlighted
+                  ? "bg-indigo-600 hover:bg-indigo-500 shadow-[rgba(255,255,255,0.1)_0px_0px_10px_1px_inset,rgba(99,102,241,0.3)_0px_0px_0px_1px]"
+                  : "bg-blue-950 hover:bg-blue-900 shadow-[rgba(255,255,255,0)_0px_0px_10px_1px_inset,rgba(0,85,255,0.12)_0px_0px_0px_1px]"
+              }`}
+            >
+              <p className="text-white text-base tracking-[-0.32px] leading-[25.6px] font-inter">
+                {ctaText}
+              </p>
+            </a>
+            {secondaryCtaText && secondaryCtaHref && (
+              <a
+                href={secondaryCtaHref}
+                className="flex items-center justify-center w-full px-[18px] py-2 rounded-[10px] text-neutral-400 hover:text-white text-sm tracking-[-0.28px] leading-[22px] font-inter transition-colors duration-200"
+              >
+                {secondaryCtaText}
+              </a>
+            )}
+          </div>
 
           {/* Features */}
           <div className="flex flex-col gap-4 w-full">

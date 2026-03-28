@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FadeIn } from "@/components/FadeIn";
 import { GradientBlob } from "@/components/GradientBlob";
 import { GradientLine } from "@/components/GradientLine";
@@ -10,6 +11,8 @@ import { PricingHeader } from "@/sections/Pricing/components/PricingHeader";
 import { PricingToggle } from "@/sections/Pricing/components/PricingToggle";
 
 export const Pricing = () => {
+  const [isAnnual, setIsAnnual] = useState(false);
+
   return (
     <Section id="pricing">
       <SectionContainer>
@@ -22,10 +25,10 @@ export const Pricing = () => {
           />
         </FadeIn>
         <FadeIn direction="up" delay={0.2} fullWidth>
-          <PricingToggle />
+          <PricingToggle isAnnual={isAnnual} onToggle={setIsAnnual} />
         </FadeIn>
         <FadeIn direction="up" delay={0.3} fullWidth>
-          <PricingCards />
+          <PricingCards isAnnual={isAnnual} />
         </FadeIn>
         <FadeIn direction="up" delay={0.4}>
           <div className="flex flex-col items-center gap-3 z-[3]">
