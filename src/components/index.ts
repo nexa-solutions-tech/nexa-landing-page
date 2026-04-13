@@ -11,7 +11,6 @@ export { Card } from "./Card";
 export { CTAButton } from "./CTAButton";
 export { FadeIn } from "./FadeIn";
 export { IconTag } from "./IconTag";
-export { PricingCard } from "./PricingCard";
 export { QuoteCard } from "./QuoteCard";
 export { TagDivider } from "./TagDivider";
 export { TestimonialCard } from "./TestimonialCard";

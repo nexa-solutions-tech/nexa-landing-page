@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Clock, CreditCard, Loader2, Shield, Star, Users } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { FormInput } from "./components/FormInput";
 import { SuccessScreen } from "./components/SuccessScreen";
 import {
@@ -17,6 +17,11 @@ import { registerClinica } from "./utils/api";
 import { maskCnpj } from "./utils/cnpj";
 
 export const CadastroPage = () => {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const planoParam = searchParams.get("plano");
+  const cicloParam = searchParams.get("ciclo");
+
   const [apiError, setApiError] = useState<string | null>(null);
   const [successData, setSuccessData] = useState<SuccessData | null>(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -41,6 +46,13 @@ export const CadastroPage = () => {
     setApiError(null);
     try {
       const result = await registerClinica(data);
+
+      if (planoParam) {
+        const ciclo = cicloParam === "YEARLY" ? "YEARLY" : "MONTHLY";
+        navigate(`/assinar?token=${result.token}&plano=${planoParam}&ciclo=${ciclo}`);
+        return;
+      }
+
       setSuccessData(result);
     } catch (err) {
       setApiError(
@@ -80,12 +92,16 @@ export const CadastroPage = () => {
               <>
                 {/* Page header */}
                 <div className="flex flex-col items-center gap-3 text-center">
-                  <SectionBadge>14 dias grátis · Sem cartão de crédito</SectionBadge>
+                  <SectionBadge>
+                    {planoParam ? "Crie sua conta para assinar" : "14 dias grátis · Sem cartão de crédito"}
+                  </SectionBadge>
                   <h1 className="text-3xl md:text-4xl font-semibold font-inter tracking-tight text-white">
-                    Comece seu teste gratuito
+                    {planoParam ? "Cadastre sua clínica" : "Comece seu teste gratuito"}
                   </h1>
                   <p className="text-neutral-400 text-sm font-inter">
-                    Acesso completo por 14 dias. Sem compromisso, cancele a qualquer momento.
+                    {planoParam
+                      ? "Após o cadastro, você será direcionado para finalizar sua assinatura."
+                      : "Acesso completo por 14 dias. Sem compromisso, cancele a qualquer momento."}
                   </p>
                 </div>
 
@@ -187,6 +203,8 @@ export const CadastroPage = () => {
                             <Loader2 size={16} className="animate-spin" />
                             Preparando sua clínica…
                           </>
+                        ) : planoParam ? (
+                          "Criar conta e assinar"
                         ) : (
                           "Começar meu teste gratuito"
                         )}
@@ -200,7 +218,7 @@ export const CadastroPage = () => {
                         </span>
                         <span className="flex items-center gap-1.5 text-xs text-neutral-500">
                           <Clock size={13} />
-                          Setup em 2 minutos
+                          Configuração em 2 minutos
                         </span>
                         <span className="flex items-center gap-1.5 text-xs text-neutral-500">
                           <CreditCard size={13} />

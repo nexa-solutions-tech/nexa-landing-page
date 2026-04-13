@@ -60,7 +60,7 @@ export const Features = () => {
               },
             ]}
             categories={[
-              { name: "Clínicas de Fisioterapia" },
+              { name: "Clínicas Médicas" },
               { name: "Consultórios" },
               { name: "Estúdios de Pilates" },
               { name: "Centros de Reabilitação" },

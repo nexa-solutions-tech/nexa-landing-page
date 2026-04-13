@@ -9,6 +9,8 @@ interface FormInputProps {
   onChange?: (value: string) => void;
   error?: string;
   type?: "text" | "email" | "password";
+  inputMode?: "text" | "numeric" | "tel" | "email";
+  maxLength?: number;
   placeholder?: string;
   hint?: string;
   showPasswordToggle?: boolean;
@@ -26,6 +28,8 @@ export const FormInput = ({
   onChange,
   error,
   type = "text",
+  inputMode,
+  maxLength,
   placeholder,
   hint,
   showPasswordToggle = false,
@@ -60,6 +64,8 @@ export const FormInput = ({
           type={inputType}
           placeholder={placeholder}
           disabled={disabled}
+          inputMode={inputMode}
+          maxLength={maxLength}
           autoComplete={type === "email" ? "email" : type === "password" ? "new-password" : "off"}
           className={[
             "w-full bg-neutral-900 border rounded-xl px-4 py-3 text-white text-sm font-inter",
