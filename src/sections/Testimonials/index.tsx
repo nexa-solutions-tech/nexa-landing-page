@@ -13,7 +13,7 @@ const testimonials = [
     rating: 5.0,
     user: {
       name: "Dra. Ana Beatriz",
-      title: "Fisioterapeuta Ortopédica",
+      title: "Ortopedista",
       imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/27.png",
       imageAlt: "foto do usuário",
     },
@@ -23,7 +23,7 @@ const testimonials = [
     rating: 5.0,
     user: {
       name: "Dr. Carlos Eduardo",
-      title: "Clínica FisioVida",
+      title: "Clínica Vida Saúde",
       imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/19.png",
     },
   },
@@ -33,12 +33,12 @@ const testimonials = [
     hasHalfStar: true,
     user: {
       name: "Dra. Marina Costa",
-      title: "Fisioterapeuta Esportiva",
+      title: "Médica Esportiva",
       imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/1.avif",
     },
   },
   {
-    text: "A melhor solução que já usei! Transformou completamente a gestão da nossa equipe de fisioterapeutas.",
+    text: "A melhor solução que já usei! Transformou completamente a gestão da nossa equipe de profissionais.",
     rating: 5.0,
     user: {
       name: "Dr. Roberto Almeida",
@@ -62,7 +62,7 @@ const testimonials = [
     rating: 5.0,
     user: {
       name: "Dr. Paulo Henrique",
-      title: "Clínica FisioCenter",
+      title: "Clínica Centro Saúde",
       imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/32.png",
     },
   },

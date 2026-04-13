@@ -1,4 +1,4 @@
-import { CreditCard, FileText, Shuffle } from "lucide-react";
+import { CreditCard, FileText } from "lucide-react";
 import type { TipoCobranca } from "../types";
 
 interface PaymentMethodSelectorProps {
@@ -19,12 +19,6 @@ const methods = [
     description: "Boleto mensal por e-mail",
     icon: FileText,
   },
-  {
-    id: "UNDEFINED" as TipoCobranca,
-    label: "Escolher na hora",
-    description: "Link de pagamento por e-mail",
-    icon: Shuffle,
-  },
 ];
 
 export const PaymentMethodSelector = ({
@@ -32,7 +26,7 @@ export const PaymentMethodSelector = ({
   onChange,
 }: PaymentMethodSelectorProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div className="grid grid-cols-2 gap-3">
       {methods.map((method) => {
         const selected = value === method.id;
         const Icon = method.icon;
@@ -43,17 +37,24 @@ export const PaymentMethodSelector = ({
             type="button"
             onClick={() => onChange(method.id)}
             className={[
-              "flex flex-col items-center gap-2 p-4 rounded-xl border transition-all duration-200 text-center",
+              "flex items-center gap-3 px-4 py-3.5 rounded-xl border transition-all duration-200",
               selected
                 ? "border-indigo-500 bg-indigo-600/10 shadow-[0_0_12px_rgba(99,102,241,0.15)]"
                 : "border-neutral-700 bg-neutral-900/50 hover:border-neutral-600",
             ].join(" ")}
           >
-            <Icon
-              size={20}
-              className={selected ? "text-indigo-400" : "text-neutral-500"}
-            />
-            <div>
+            <div
+              className={[
+                "flex items-center justify-center w-9 h-9 rounded-lg shrink-0",
+                selected ? "bg-indigo-500/15" : "bg-neutral-800",
+              ].join(" ")}
+            >
+              <Icon
+                size={18}
+                className={selected ? "text-indigo-400" : "text-neutral-500"}
+              />
+            </div>
+            <div className="text-left">
               <p
                 className={[
                   "text-sm font-medium font-inter",

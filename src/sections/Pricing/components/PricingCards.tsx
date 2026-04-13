@@ -178,7 +178,7 @@ const PricingCardItem = ({ plan, isAnnual, index }: PricingCardItemProps) => {
                 ? "text-violet-300"
                 : isPopular
                   ? "text-indigo-300"
-                  : "text-neutral-400",
+                  : "text-indigo-300/60",
             ].join(" ")}
           >
             {plan.name}
@@ -231,7 +231,7 @@ const PricingCardItem = ({ plan, isAnnual, index }: PricingCardItemProps) => {
               ? "bg-gradient-to-r from-transparent via-violet-400/35 to-transparent"
               : isPopular
                 ? "bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent"
-                : "bg-neutral-800",
+                : "bg-gradient-to-r from-transparent via-indigo-500/15 to-transparent",
           ].join(" ")}
         />
 
@@ -246,7 +246,7 @@ const PricingCardItem = ({ plan, isAnnual, index }: PricingCardItemProps) => {
                     ? "bg-violet-500/15"
                     : isPopular
                       ? "bg-indigo-500/20"
-                      : "bg-neutral-800",
+                      : "bg-indigo-500/10",
                 ].join(" ")}
               >
                 <Check
@@ -256,7 +256,7 @@ const PricingCardItem = ({ plan, isAnnual, index }: PricingCardItemProps) => {
                       ? "text-violet-400"
                       : isPopular
                         ? "text-indigo-400"
-                        : "text-neutral-500"
+                        : "text-indigo-400/60"
                   }
                 />
               </div>
@@ -275,14 +275,14 @@ const PricingCardItem = ({ plan, isAnnual, index }: PricingCardItemProps) => {
         {/* CTA Buttons */}
         <div className="flex flex-col gap-2 mt-auto pt-2">
           <a
-            href={`/cadastro?plano=${plan.planKey}`}
+            href={`/cadastro?plano=${plan.planKey}&ciclo=${isAnnual ? "YEARLY" : "MONTHLY"}`}
             className={[
               "flex items-center justify-center w-full py-3 rounded-xl text-sm font-semibold font-inter transition-all duration-200",
               isPremium
                 ? "bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-[0_0_16px_rgba(120,110,255,0.35)] hover:shadow-[0_0_24px_rgba(120,110,255,0.5)]"
                 : isPopular
                   ? "bg-indigo-600 hover:bg-indigo-500 text-white shadow-[0_0_16px_rgba(99,102,241,0.3)] hover:shadow-[0_0_24px_rgba(99,102,241,0.45)]"
-                  : "bg-neutral-800/80 hover:bg-neutral-700/80 text-neutral-200 hover:text-white",
+                  : "bg-indigo-950/80 border border-indigo-500/20 text-neutral-200 hover:bg-indigo-900/60 hover:border-indigo-500/40 hover:text-white",
             ].join(" ")}
           >
             Assinar Agora

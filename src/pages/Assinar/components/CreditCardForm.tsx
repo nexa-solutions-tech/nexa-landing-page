@@ -1,6 +1,6 @@
 import { FormInput } from "@/pages/Cadastro/components/FormInput";
 import type { UseFormRegister, UseFormSetValue, FieldErrors } from "react-hook-form";
-import { maskCardNumber } from "../utils/masks";
+import { maskCardNumber, maskExpiryMonth, maskExpiryYear, maskCvv } from "../utils/masks";
 import type { PaymentFormData } from "../types";
 
 interface CreditCardFormProps {
@@ -19,10 +19,11 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
       <FormInput
         id="cardNumber"
         label="Número do cartão"
+        inputMode="numeric"
         registration={{
           ...register("cardNumber"),
           onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
-            setValue("cardNumber", maskCardNumber(e.target.value));
+            setValue("cardNumber", maskCardNumber(e.target.value), { shouldValidate: true });
           },
         }}
         error={errors.cardNumber?.message}
@@ -32,7 +33,12 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
       <FormInput
         id="cardName"
         label="Nome impresso no cartão"
-        registration={register("cardName")}
+        registration={{
+          ...register("cardName"),
+          onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+            setValue("cardName", e.target.value.toUpperCase(), { shouldValidate: true });
+          },
+        }}
         error={errors.cardName?.message}
         placeholder="JOÃO M SILVA"
       />
@@ -41,21 +47,42 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
         <FormInput
           id="cardExpiryMonth"
           label="Mês"
-          registration={register("cardExpiryMonth")}
+          inputMode="numeric"
+          maxLength={2}
+          registration={{
+            ...register("cardExpiryMonth"),
+            onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+              setValue("cardExpiryMonth", maskExpiryMonth(e.target.value), { shouldValidate: true });
+            },
+          }}
           error={errors.cardExpiryMonth?.message}
           placeholder="01"
         />
         <FormInput
           id="cardExpiryYear"
           label="Ano"
-          registration={register("cardExpiryYear")}
+          inputMode="numeric"
+          maxLength={4}
+          registration={{
+            ...register("cardExpiryYear"),
+            onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+              setValue("cardExpiryYear", maskExpiryYear(e.target.value), { shouldValidate: true });
+            },
+          }}
           error={errors.cardExpiryYear?.message}
           placeholder="2027"
         />
         <FormInput
           id="cardCvv"
           label="CVV"
-          registration={register("cardCvv")}
+          inputMode="numeric"
+          maxLength={4}
+          registration={{
+            ...register("cardCvv"),
+            onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+              setValue("cardCvv", maskCvv(e.target.value), { shouldValidate: true });
+            },
+          }}
           error={errors.cardCvv?.message}
           placeholder="123"
         />

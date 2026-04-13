@@ -1,6 +1,6 @@
 import { FormInput } from "@/pages/Cadastro/components/FormInput";
-import type { UseFormRegister, UseFormSetValue, FieldErrors } from "react-hook-form";
-import { maskCpfCnpj, maskPhone, maskPostalCode } from "../utils/masks";
+import type { UseFormRegister, UseFormSetValue, UseFormRegisterReturn, FieldErrors } from "react-hook-form";
+import { maskPhone, maskPostalCode } from "../utils/masks";
 import type { PaymentFormData } from "../types";
 
 type CreditCardData = Extract<PaymentFormData, { tipoCobranca: "CREDIT_CARD" }>;
@@ -9,9 +9,19 @@ interface CardHolderFormProps {
   register: UseFormRegister<CreditCardData>;
   setValue: UseFormSetValue<CreditCardData>;
   errors: FieldErrors<CreditCardData>;
+  cpfCnpjRegistration: UseFormRegisterReturn & {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  };
+  cpfCnpjError?: string;
 }
 
-export const CardHolderForm = ({ register, setValue, errors }: CardHolderFormProps) => {
+export const CardHolderForm = ({
+  register,
+  setValue,
+  errors,
+  cpfCnpjRegistration,
+  cpfCnpjError,
+}: CardHolderFormProps) => {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter">
@@ -39,15 +49,10 @@ export const CardHolderForm = ({ register, setValue, errors }: CardHolderFormPro
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormInput
-          id="holderCpfCnpj"
+          id="cpfCnpj"
           label="CPF ou CNPJ"
-          registration={{
-            ...register("holderCpfCnpj"),
-            onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
-              setValue("holderCpfCnpj", maskCpfCnpj(e.target.value));
-            },
-          }}
-          error={errors.holderCpfCnpj?.message}
+          registration={cpfCnpjRegistration}
+          error={cpfCnpjError}
           placeholder="000.000.000-00"
         />
 
@@ -57,7 +62,7 @@ export const CardHolderForm = ({ register, setValue, errors }: CardHolderFormPro
           registration={{
             ...register("holderPhone"),
             onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
-              setValue("holderPhone", maskPhone(e.target.value));
+              setValue("holderPhone", maskPhone(e.target.value), { shouldValidate: true });
             },
           }}
           error={errors.holderPhone?.message}
@@ -72,7 +77,7 @@ export const CardHolderForm = ({ register, setValue, errors }: CardHolderFormPro
           registration={{
             ...register("holderPostalCode"),
             onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
-              setValue("holderPostalCode", maskPostalCode(e.target.value));
+              setValue("holderPostalCode", maskPostalCode(e.target.value), { shouldValidate: true });
             },
           }}
           error={errors.holderPostalCode?.message}
@@ -82,6 +87,8 @@ export const CardHolderForm = ({ register, setValue, errors }: CardHolderFormPro
         <FormInput
           id="holderAddressNumber"
           label="Número"
+          inputMode="numeric"
+          maxLength={10}
           registration={register("holderAddressNumber")}
           error={errors.holderAddressNumber?.message}
           placeholder="123"
