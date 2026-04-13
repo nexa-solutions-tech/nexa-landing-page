@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle2, PartyPopper } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Mail, PartyPopper } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ANGULAR_APP_URL, PLAN_DISPLAY_NAMES } from "../constants";
-import type { PlanoNome } from "../types";
+import type { PlanoNome, TipoCobranca } from "../types";
 
 interface SuccessScreenProps {
   planoNome: PlanoNome;
+  tipoCobranca: TipoCobranca;
 }
 
-export const SuccessScreen = ({ planoNome }: SuccessScreenProps) => {
+export const SuccessScreen = ({ planoNome, tipoCobranca }: SuccessScreenProps) => {
+  const isBoleto = tipoCobranca === "BOLETO";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -17,29 +20,65 @@ export const SuccessScreen = ({ planoNome }: SuccessScreenProps) => {
       className="flex flex-col items-center text-center gap-6 w-full"
     >
       {/* Icon */}
-      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30">
-        <CheckCircle2 size={32} className="text-emerald-400" />
+      <div
+        className={[
+          "flex items-center justify-center w-16 h-16 rounded-full border",
+          isBoleto
+            ? "bg-indigo-500/15 border-indigo-500/30"
+            : "bg-emerald-500/15 border-emerald-500/30",
+        ].join(" ")}
+      >
+        {isBoleto ? (
+          <Mail size={32} className="text-indigo-400" />
+        ) : (
+          <CheckCircle2 size={32} className="text-emerald-400" />
+        )}
       </div>
 
       {/* Heading */}
       <div className="flex flex-col gap-2">
         <h2 className="text-2xl font-semibold text-white font-inter tracking-tight">
-          Assinatura ativada!
+          {isBoleto ? "Assinatura cadastrada!" : "Assinatura ativada!"}
         </h2>
-        <p className="text-neutral-400 text-sm font-inter leading-relaxed">
-          Seu plano{" "}
-          <span className="text-white font-medium">
-            {PLAN_DISPLAY_NAMES[planoNome]}
-          </span>{" "}
-          foi ativado com sucesso.
+        <p className="text-neutral-400 text-sm font-inter leading-relaxed max-w-sm">
+          {isBoleto ? (
+            <>
+              Seu plano{" "}
+              <span className="text-white font-medium">
+                {PLAN_DISPLAY_NAMES[planoNome]}
+              </span>{" "}
+              foi cadastrado com sucesso. O boleto será enviado para o seu e-mail.
+            </>
+          ) : (
+            <>
+              Seu plano{" "}
+              <span className="text-white font-medium">
+                {PLAN_DISPLAY_NAMES[planoNome]}
+              </span>{" "}
+              foi ativado com sucesso.
+            </>
+          )}
         </p>
       </div>
 
-      {/* Celebration badge */}
-      <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 w-full">
-        <PartyPopper size={18} className="text-emerald-400 shrink-0" />
+      {/* Info badge */}
+      <div
+        className={[
+          "flex items-start gap-2.5 px-4 py-3 rounded-xl border w-full",
+          isBoleto
+            ? "bg-indigo-500/10 border-indigo-500/20"
+            : "bg-emerald-500/10 border-emerald-500/20",
+        ].join(" ")}
+      >
+        {isBoleto ? (
+          <Mail size={18} className="text-indigo-400 shrink-0 mt-0.5" />
+        ) : (
+          <PartyPopper size={18} className="text-emerald-400 shrink-0 mt-0.5" />
+        )}
         <p className="text-sm font-inter text-left text-neutral-300">
-          Você agora tem acesso completo a todos os recursos do plano.
+          {isBoleto
+            ? "Após a confirmação do pagamento, todos os recursos do plano serão liberados automaticamente."
+            : "Você agora tem acesso completo a todos os recursos do plano."}
         </p>
       </div>
 

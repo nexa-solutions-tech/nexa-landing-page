@@ -6,7 +6,7 @@ import { PaymentForm } from "./components/PaymentForm";
 import { PlanSelection } from "./components/PlanSelection";
 import { StepIndicator } from "./components/StepIndicator";
 import { SuccessScreen } from "./components/SuccessScreen";
-import type { AssinaturaPayload, CheckoutStep, Ciclo, PlanoAPI, PlanoNome } from "./types";
+import type { AssinaturaPayload, CheckoutStep, Ciclo, PlanoAPI, PlanoNome, TipoCobranca } from "./types";
 import { createAssinatura, fetchPlanos } from "./utils/api";
 
 const LOGIN_URL = "https://nexasolutionstech.com.br/login";
@@ -14,6 +14,7 @@ const LOGIN_URL = "https://nexasolutionstech.com.br/login";
 export const AssinarPage = () => {
   const [searchParams] = useSearchParams();
   const tokenRef = useRef<string | null>(null);
+  const didFetchRef = useRef(false);
 
   const [step, setStep] = useState<CheckoutStep>(1);
   const [planos, setPlanos] = useState<PlanoAPI[]>([]);
@@ -22,16 +23,22 @@ export const AssinarPage = () => {
   const [apiError, setApiError] = useState<string | null>(null);
 
   const [selectedPlano, setSelectedPlano] = useState<PlanoNome | null>(null);
-  const [ciclo, setCiclo] = useState<Ciclo>("MONTHLY");
+  const [tipoCobranca, setTipoCobranca] = useState<TipoCobranca>("CREDIT_CARD");
+  const [ciclo, setCiclo] = useState<Ciclo>(
+    searchParams.get("ciclo") === "YEARLY" ? "YEARLY" : "MONTHLY"
+  );
 
   // Extract token on mount
   useEffect(() => {
+    if (didFetchRef.current) return;
+
     const token = searchParams.get("token");
     if (!token) {
       window.location.href = LOGIN_URL;
       return;
     }
 
+    didFetchRef.current = true;
     tokenRef.current = token;
 
     // Clean token from URL for security
@@ -39,6 +46,7 @@ export const AssinarPage = () => {
     url.searchParams.delete("token");
     const planoParam = url.searchParams.get("plano");
     url.searchParams.delete("plano");
+    url.searchParams.delete("ciclo");
     window.history.replaceState({}, "", url.pathname + url.search);
 
     // Load plans
@@ -74,6 +82,7 @@ export const AssinarPage = () => {
     setApiError(null);
     try {
       await createAssinatura(tokenRef.current!, payload);
+      setTipoCobranca(payload.tipoCobranca);
       setStep(3);
     } catch (err) {
       setApiError(
@@ -152,7 +161,7 @@ export const AssinarPage = () => {
                 )}
 
                 {step === 3 && selectedPlano && (
-                  <SuccessScreen planoNome={selectedPlano} />
+                  <SuccessScreen planoNome={selectedPlano} tipoCobranca={tipoCobranca} />
                 )}
               </>
             )}

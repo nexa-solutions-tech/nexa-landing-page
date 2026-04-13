@@ -4,7 +4,7 @@ const faqs = [
   {
     question: "O que é o NexaClinic?",
     answer:
-      "O NexaClinic é uma plataforma completa de gestão para clínicas de fisioterapia. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
+      "O NexaClinic é uma plataforma completa de gestão para clínicas e consultórios. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
   },
   {
     question: "Posso integrar com convênios e planos de saúde?",

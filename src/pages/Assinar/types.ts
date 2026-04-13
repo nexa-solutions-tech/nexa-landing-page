@@ -41,12 +41,25 @@ const creditCardSchema = z.object({
   cpfCnpj: z.string().min(14, "Informe o CPF ou CNPJ"),
   cardNumber: z.string().min(19, "Número do cartão inválido"),
   cardName: z.string().min(1, "Informe o nome no cartão"),
-  cardExpiryMonth: z.string().min(2, "Mês inválido"),
-  cardExpiryYear: z.string().min(4, "Ano inválido"),
-  cardCvv: z.string().min(3, "CVV inválido"),
+  cardExpiryMonth: z
+    .string()
+    .length(2, "Mês inválido")
+    .regex(/^(0[1-9]|1[0-2])$/, "Mês deve ser entre 01 e 12"),
+  cardExpiryYear: z
+    .string()
+    .length(4, "Ano inválido")
+    .regex(/^\d{4}$/, "Ano inválido")
+    .refine(
+      (val) => parseInt(val, 10) >= new Date().getFullYear(),
+      "Ano não pode ser anterior ao atual"
+    ),
+  cardCvv: z
+    .string()
+    .min(3, "CVV inválido")
+    .max(4, "CVV inválido")
+    .regex(/^\d{3,4}$/, "CVV inválido"),
   holderName: z.string().min(1, "Informe o nome do titular"),
   holderEmail: z.string().email("E-mail inválido"),
-  holderCpfCnpj: z.string().min(14, "Informe o CPF ou CNPJ"),
   holderPostalCode: z.string().min(9, "CEP inválido"),
   holderAddressNumber: z.string().min(1, "Informe o número"),
   holderPhone: z.string().min(14, "Telefone inválido"),
@@ -57,15 +70,9 @@ const boletoSchema = z.object({
   cpfCnpj: z.string().min(14, "Informe o CPF ou CNPJ"),
 });
 
-const undefinedSchema = z.object({
-  tipoCobranca: z.literal("UNDEFINED"),
-  cpfCnpj: z.string().min(14, "Informe o CPF ou CNPJ"),
-});
-
 export const paymentSchema = z.discriminatedUnion("tipoCobranca", [
   creditCardSchema,
   boletoSchema,
-  undefinedSchema,
 ]);
 
 export type PaymentFormData = z.infer<typeof paymentSchema>;

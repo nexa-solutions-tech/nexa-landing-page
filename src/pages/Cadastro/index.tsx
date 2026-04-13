@@ -20,6 +20,7 @@ export const CadastroPage = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const planoParam = searchParams.get("plano");
+  const cicloParam = searchParams.get("ciclo");
 
   const [apiError, setApiError] = useState<string | null>(null);
   const [successData, setSuccessData] = useState<SuccessData | null>(null);
@@ -47,7 +48,8 @@ export const CadastroPage = () => {
       const result = await registerClinica(data);
 
       if (planoParam) {
-        navigate(`/assinar?token=${result.token}&plano=${planoParam}`);
+        const ciclo = cicloParam === "YEARLY" ? "YEARLY" : "MONTHLY";
+        navigate(`/assinar?token=${result.token}&plano=${planoParam}&ciclo=${ciclo}`);
         return;
       }
 
@@ -216,7 +218,7 @@ export const CadastroPage = () => {
                         </span>
                         <span className="flex items-center gap-1.5 text-xs text-neutral-500">
                           <Clock size={13} />
-                          Setup em 2 minutos
+                          Configuração em 2 minutos
                         </span>
                         <span className="flex items-center gap-1.5 text-xs text-neutral-500">
                           <CreditCard size={13} />

@@ -1,10 +1,10 @@
+import { FormInput } from "@/pages/Cadastro/components/FormInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { ArrowLeft, Loader2, Lock } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { FormInput } from "@/pages/Cadastro/components/FormInput";
-import { maskCpfCnpj } from "../utils/masks";
 import { paymentSchema, type AssinaturaPayload, type Ciclo, type PaymentFormData, type PlanoAPI, type TipoCobranca } from "../types";
+import { maskCpfCnpj } from "../utils/masks";
 import { CardHolderForm } from "./CardHolderForm";
 import { CreditCardForm } from "./CreditCardForm";
 import { PaymentMethodSelector } from "./PaymentMethodSelector";
@@ -33,6 +33,8 @@ export const PaymentForm = ({
     formState: { errors, isSubmitting },
   } = useForm<PaymentFormData>({
     resolver: zodResolver(paymentSchema),
+    mode: "onTouched",
+    reValidateMode: "onChange",
     defaultValues: {
       tipoCobranca: "CREDIT_CARD",
       cpfCnpj: "",
@@ -42,7 +44,9 @@ export const PaymentForm = ({
   const tipoCobranca = watch("tipoCobranca");
 
   const handleMethodChange = (method: TipoCobranca) => {
-    setValue("tipoCobranca", method, { shouldValidate: false });
+    if (method === "CREDIT_CARD" || method === "BOLETO") {
+      setValue("tipoCobranca", method, { shouldValidate: false });
+    }
   };
 
   const processSubmit = async (data: PaymentFormData) => {
@@ -66,7 +70,7 @@ export const PaymentForm = ({
       payload.creditCardHolderInfo = {
         name: data.holderName,
         email: data.holderEmail,
-        cpfCnpj: data.holderCpfCnpj.replace(/\D/g, ""),
+        cpfCnpj: cpfCnpjClean,
         postalCode: data.holderPostalCode.replace(/\D/g, ""),
         addressNumber: data.holderAddressNumber,
         phone: data.holderPhone.replace(/\D/g, ""),
@@ -101,27 +105,8 @@ export const PaymentForm = ({
           <PaymentMethodSelector value={tipoCobranca} onChange={handleMethodChange} />
         </div>
 
-        {/* CPF/CNPJ — always required */}
-        <div className="flex flex-col gap-4">
-          <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter">
-            {tipoCobranca === "CREDIT_CARD" ? "Identificação" : "Dados para cobrança"}
-          </p>
-          <FormInput
-            id="cpfCnpj"
-            label="CPF ou CNPJ"
-            registration={{
-              ...register("cpfCnpj"),
-              onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
-                setValue("cpfCnpj", maskCpfCnpj(e.target.value));
-              },
-            }}
-            error={errors.cpfCnpj?.message}
-            placeholder="000.000.000-00"
-          />
-        </div>
-
         {/* Credit card fields */}
-        {tipoCobranca === "CREDIT_CARD" && (
+        {tipoCobranca === "CREDIT_CARD" ? (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
@@ -138,8 +123,33 @@ export const PaymentForm = ({
               register={ccRegister as any}
               setValue={ccSetValue as any}
               errors={ccErrors as any}
+              cpfCnpjRegistration={{
+                ...register("cpfCnpj"),
+                onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+                  setValue("cpfCnpj", maskCpfCnpj(e.target.value), { shouldValidate: true });
+                },
+              }}
+              cpfCnpjError={errors.cpfCnpj?.message}
             />
           </motion.div>
+        ) : (
+          <div className="flex flex-col gap-4">
+            <p className="text-xs text-neutral-500 uppercase tracking-wider font-inter">
+              Dados para cobrança
+            </p>
+            <FormInput
+              id="cpfCnpj"
+              label="CPF ou CNPJ"
+              registration={{
+                ...register("cpfCnpj"),
+                onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+                  setValue("cpfCnpj", maskCpfCnpj(e.target.value), { shouldValidate: true });
+                },
+              }}
+              error={errors.cpfCnpj?.message}
+              placeholder="000.000.000-00"
+            />
+          </div>
         )}
 
         {/* Trust signal */}
