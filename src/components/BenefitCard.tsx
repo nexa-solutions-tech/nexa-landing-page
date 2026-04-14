@@ -37,7 +37,7 @@ export const BenefitCard = ({
       </div>
 
       {/* Content */}
-      <div className="relative content-start items-start flex flex-col shrink-0 h-min justify-center gap-y-4 w-full z-[2] overflow-hidden">
+      <div className="relative content-start items-start flex flex-col shrink-0 h-min justify-center gap-y-4 w-full z-[2]">
         <h3 className="text-white text-2xl font-medium tracking-[-0.48px] leading-7 text-left font-inter w-full">
           {title}
         </h3>

@@ -17,7 +17,7 @@ export const StatCard = ({ icon, value, suffix = "+", label }: StatCardProps) =>
       <div className="text-indigo-400">{icon}</div>
       <span
         ref={ref}
-        className="text-[32px] md:text-[44px] font-medium tracking-[-0.44px] leading-tight text-white font-inter"
+        className="text-[22px] sm:text-[32px] md:text-[44px] font-medium tracking-[-0.44px] leading-tight text-white font-inter"
       >
         {display}
         {suffix}
