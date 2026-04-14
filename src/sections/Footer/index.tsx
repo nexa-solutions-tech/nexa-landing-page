@@ -9,10 +9,10 @@ const FooterGlow = () => (
 
 export const Footer = () => {
   return (
-    <footer className="relative w-full md:bg-[radial-gradient(83%_50%_at_44%_111.5%,rgb(3,20,87)_0%,rgb(0,0,0)_100%)] md:flex md:flex-col md:items-center md:gap-y-[60px] md:overflow-hidden md:px-10 md:py-20">
+    <footer className="relative w-full bg-[radial-gradient(83%_50%_at_44%_111.5%,rgb(3,20,87)_0%,rgb(0,0,0)_100%)] flex flex-col items-center gap-y-10 md:gap-y-[60px] overflow-hidden px-[18px] py-14 md:px-10 md:py-20">
       <FadeIn
         direction="up"
-        className="md:relative md:flex md:flex-col md:items-center md:justify-center md:gap-y-11 md:max-w-[1200px] md:w-full md:z-[2]"
+        className="relative flex flex-col items-center justify-center gap-y-8 md:gap-y-11 max-w-[1200px] w-full z-[2]"
       >
         <FooterNav />
         <FooterLinks />

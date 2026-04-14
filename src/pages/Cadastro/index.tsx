@@ -64,8 +64,10 @@ export const CadastroPage = () => {
   return (
     <div className={`relative bg-black text-white font-inter ${successData ? "h-screen overflow-hidden" : "min-h-screen"}`}>
       {/* Background decorations */}
-      <LightRays topOffset="-600px" />
-      <GradientBlob className="top-0 bottom-auto" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <LightRays topOffset="-600px" />
+        <GradientBlob className="top-0 bottom-auto" />
+      </div>
 
       {/* Minimal header */}
       <header className="fixed z-[8] top-0 inset-x-0 h-[68px] flex items-center px-6 md:px-10 backdrop-blur-sm bg-gradient-to-b from-black/80 to-transparent">
@@ -112,7 +114,7 @@ export const CadastroPage = () => {
                   transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
                   className="relative p-px rounded-2xl bg-[linear-gradient(180deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] w-full"
                 >
-                  <div className="rounded-2xl bg-[radial-gradient(96%_96%_at_49.3%_-25.1%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] p-8 w-full">
+                  <div className="rounded-2xl bg-[radial-gradient(96%_96%_at_49.3%_-25.1%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] p-5 md:p-8 w-full">
                     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 w-full">
 
                       {/* Section: Seus dados */}

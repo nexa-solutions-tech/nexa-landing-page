@@ -43,7 +43,7 @@ export const Card = ({
       className={`relative content-start items-start box-border caret-transparent flex flex-col shrink-0 h-min justify-start w-full overflow-hidden rounded-2xl ${variantClasses[variant].outer} ${className}`}
     >
       <div
-        className={`relative content-start items-start box-border caret-transparent flex flex-col basis-0 grow shrink-0 h-px justify-start w-full rounded-2xl ${variantClasses[variant].inner} ${paddingClasses[padding]} ${innerClassName}`}
+        className={`relative content-start items-start box-border caret-transparent flex flex-col grow shrink-0 justify-start w-full rounded-2xl ${variantClasses[variant].inner} ${paddingClasses[padding]} ${innerClassName}`}
       >
         {children}
       </div>

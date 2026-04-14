@@ -29,7 +29,7 @@ const NavDivider = () => (
 
 export const FooterNav = () => {
   return (
-    <nav className="flex flex-col md:flex-row md:flex-wrap items-start md:items-center gap-4 md:gap-5 md:justify-between w-full">
+    <nav className="flex flex-col md:flex-row md:flex-wrap items-start md:items-center gap-3 md:gap-5 md:justify-between w-full">
       <FooterLogo />
 
       <NavDivider />
@@ -56,7 +56,7 @@ export const FooterNav = () => {
 
       <a
         href="/cadastro"
-        className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-950 border border-indigo-500/20 backdrop-blur-sm text-white text-sm font-inter hover:bg-indigo-900 transition-colors duration-200"
+        className="flex items-center justify-center gap-2 w-full md:w-auto px-4 py-2.5 rounded-xl bg-indigo-950 border border-indigo-500/20 backdrop-blur-sm text-white text-sm font-inter hover:bg-indigo-900 transition-colors duration-200"
       >
         Testar Grátis
         <ExternalLink size={14} />

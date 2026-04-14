@@ -26,7 +26,7 @@ export const PaymentMethodSelector = ({
   onChange,
 }: PaymentMethodSelectorProps) => {
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {methods.map((method) => {
         const selected = value === method.id;
         const Icon = method.icon;

@@ -95,8 +95,10 @@ export const AssinarPage = () => {
     <div
       className={`relative bg-black text-white font-inter ${step === 3 ? "h-screen overflow-hidden" : "min-h-screen"}`}
     >
-      <LightRays topOffset="-600px" />
-      <GradientBlob className="top-0 bottom-auto" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <LightRays topOffset="-600px" />
+        <GradientBlob className="top-0 bottom-auto" />
+      </div>
 
       {/* Header */}
       <header className="fixed z-[8] top-0 inset-x-0 h-[68px] flex items-center px-6 md:px-10 backdrop-blur-sm bg-gradient-to-b from-black/80 to-transparent">

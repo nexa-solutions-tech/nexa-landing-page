@@ -68,7 +68,7 @@ export const FormInput = ({
           maxLength={maxLength}
           autoComplete={type === "email" ? "email" : type === "password" ? "new-password" : "off"}
           className={[
-            "w-full bg-neutral-900 border rounded-xl px-4 py-3 text-white text-sm font-inter",
+            "w-full bg-neutral-900 border rounded-xl px-4 py-3 text-white text-base md:text-sm font-inter",
             "placeholder-neutral-600 transition-all duration-200 outline-none",
             "focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500",
             "disabled:opacity-50 disabled:cursor-not-allowed",

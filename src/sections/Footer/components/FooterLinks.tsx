@@ -15,7 +15,7 @@ export const FooterLinks = () => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex-1 flex flex-col gap-6 min-w-[284px]"
+          className="group flex-1 flex flex-col gap-4 md:gap-6 min-w-0 md:min-w-[284px]"
         >
           <div className="h-px w-full bg-neutral-800" />
           <div className="flex items-center justify-between">
