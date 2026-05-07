@@ -1,4 +1,5 @@
 import type { CadastroPayload, SuccessData } from "../types";
+import { extractApiErrorMessage } from "@/utils/apiError";
 
 export async function registerClinica(data: CadastroPayload): Promise<SuccessData> {
   const payload = {
@@ -14,9 +15,7 @@ export async function registerClinica(data: CadastroPayload): Promise<SuccessDat
 
   if (!response.ok) {
     const err = await response.json().catch(() => ({}));
-    throw new Error(
-      (err as { message?: string }).message ?? "Erro ao cadastrar. Tente novamente."
-    );
+    throw new Error(extractApiErrorMessage(err, "Erro ao cadastrar. Tente novamente."));
   }
 
   const json = await response.json();

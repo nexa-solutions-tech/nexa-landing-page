@@ -13,6 +13,7 @@ interface CardHolderFormProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   };
   cpfCnpjError?: string;
+  cpfCnpjHint?: string;
 }
 
 export const CardHolderForm = ({
@@ -21,6 +22,7 @@ export const CardHolderForm = ({
   errors,
   cpfCnpjRegistration,
   cpfCnpjError,
+  cpfCnpjHint,
 }: CardHolderFormProps) => {
   return (
     <div className="flex flex-col gap-4">
@@ -50,10 +52,11 @@ export const CardHolderForm = ({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormInput
           id="cpfCnpj"
-          label="CPF ou CNPJ"
+          label="CPF/CNPJ do titular"
           registration={cpfCnpjRegistration}
           error={cpfCnpjError}
           placeholder="000.000.000-00"
+          hint={cpfCnpjHint}
         />
 
         <FormInput

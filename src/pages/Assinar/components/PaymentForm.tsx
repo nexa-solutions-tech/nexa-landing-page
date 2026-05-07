@@ -16,6 +16,8 @@ interface PaymentFormProps {
   onBack: () => void;
   onSubmit: (payload: AssinaturaPayload) => Promise<void>;
   apiError: string | null;
+  /** CNPJ informado no cadastro da clínica, quando disponível. */
+  clinicCnpj?: string;
 }
 
 export const PaymentForm = ({
@@ -24,6 +26,7 @@ export const PaymentForm = ({
   onBack,
   onSubmit,
   apiError,
+  clinicCnpj,
 }: PaymentFormProps) => {
   const {
     register,
@@ -37,7 +40,7 @@ export const PaymentForm = ({
     reValidateMode: "onChange",
     defaultValues: {
       tipoCobranca: "CREDIT_CARD",
-      cpfCnpj: "",
+      cpfCnpj: clinicCnpj ? maskCpfCnpj(clinicCnpj) : "",
     },
   });
 
@@ -130,6 +133,7 @@ export const PaymentForm = ({
                 },
               }}
               cpfCnpjError={errors.cpfCnpj?.message}
+              cpfCnpjHint="Documento de quem aparecerá como pagador na fatura."
             />
           </motion.div>
         ) : (
@@ -139,7 +143,7 @@ export const PaymentForm = ({
             </p>
             <FormInput
               id="cpfCnpj"
-              label="CPF ou CNPJ"
+              label="CPF/CNPJ do pagador"
               registration={{
                 ...register("cpfCnpj"),
                 onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -148,6 +152,7 @@ export const PaymentForm = ({
               }}
               error={errors.cpfCnpj?.message}
               placeholder="000.000.000-00"
+              hint="Documento que aparecerá no boleto."
             />
           </div>
         )}

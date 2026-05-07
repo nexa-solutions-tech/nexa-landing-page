@@ -1,4 +1,5 @@
 import type { AssinaturaPayload, PlanoAPI } from "../types";
+import { extractApiErrorMessage } from "@/utils/apiError";
 
 const BASE_URL = "http://localhost:8080/api";
 
@@ -13,7 +14,8 @@ export async function fetchPlanos(token: string): Promise<PlanoAPI[]> {
     if (response.status === 401 || response.status === 403) {
       throw new Error("UNAUTHORIZED");
     }
-    throw new Error("Erro ao carregar planos. Tente novamente.");
+    const err = await response.json().catch(() => ({}));
+    throw new Error(extractApiErrorMessage(err, "Erro ao carregar planos. Tente novamente."));
   }
 
   const json = await response.json();
@@ -35,8 +37,6 @@ export async function createAssinatura(
 
   if (!response.ok) {
     const err = await response.json().catch(() => ({}));
-    throw new Error(
-      (err as { message?: string }).message ?? "Erro ao criar assinatura. Tente novamente."
-    );
+    throw new Error(extractApiErrorMessage(err, "Erro ao criar assinatura. Tente novamente."));
   }
 }
