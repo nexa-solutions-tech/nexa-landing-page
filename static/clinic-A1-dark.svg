@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nexa Clinic">
+  <title>Nexa Clinic</title>
+  <defs><radialGradient id="g" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#3B6EFF" stop-opacity="0.32"></stop>
+    <stop offset="100%" stop-color="#3B6EFF" stop-opacity="0"></stop>
+  </radialGradient></defs>
+  <g transform="translate(50,40)">
+    <circle cx="0" cy="0" r="22" fill="url(#g)"></circle>
+    <ellipse cx="0" cy="0" rx="28" ry="11" stroke="#3B6EFF" stroke-width="0.9" fill="none" transform="rotate(-28)" opacity="0.45"></ellipse>
+    <ellipse cx="0" cy="0" rx="20" ry="8" stroke="#3B6EFF" stroke-width="1.1" fill="none" transform="rotate(42)" opacity="0.75"></ellipse>
+    <ellipse cx="0" cy="0" rx="12" ry="4.8" stroke="#5B87FF" stroke-width="1" fill="none" transform="rotate(8)" opacity="1"></ellipse>
+    <circle cx="0" cy="0" r="8" fill="#3B6EFF" opacity="0.12"></circle>
+    <circle cx="0" cy="0" r="5" fill="#3B6EFF" opacity="0.25"></circle>
+    <circle cx="0" cy="0" r="3.2" fill="#3B6EFF"></circle>
+    <circle cx="0" cy="0" r="1.4" fill="#7BA3FF"></circle>
+  </g>
+  <text x="198" y="48" text-anchor="end" font-family="&#39;Syne&#39;, system-ui, sans-serif" font-weight="400" font-size="26" fill="#F4F6FB" letter-spacing="8">NEXA</text>
+  <line x1="202" y1="26" x2="202" y2="54" stroke="#F4F6FB" stroke-width="1.4"></line>
+  <text x="214" y="48" font-family="&#39;Syne&#39;, system-ui, sans-serif" font-weight="400" font-size="26" fill="#F4F6FB" letter-spacing="8">CLINIC</text>
+</svg>

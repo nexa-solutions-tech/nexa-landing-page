@@ -53,38 +53,12 @@ const IntegrationCard = ({
 
 const CenterLogo = () => (
   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[calc(50%+20px)] z-[2]">
-    <div className="flex items-center justify-center gap-2.5 p-7">
-      <div className="flex flex-col items-center justify-center gap-6">
-        {/* Glowing dot with animated pulse */}
-        <div
-          className="relative w-[22px] h-[32px] bg-blue-600 rounded-full overflow-hidden"
-          style={{ animation: 'center-glow-pulse 3s ease-in-out infinite' }}
-        />
-
-        {/* Expanding pulse rings */}
-        {[0, 1, 2].map((i) => (
-          <div
-            key={`ring-${i}`}
-            className="absolute left-1/2 top-1/2 w-[22px] h-[22px] rounded-full border border-blue-500/40 pointer-events-none"
-            style={{
-              animation: `center-ring-pulse 3s ease-out ${i * 1}s infinite`,
-            }}
-          />
-        ))}
-
-        {/* Logo */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[42px] z-[1]">
-          <a className="flex items-center justify-center h-full w-[130px] gap-1.5 overflow-hidden">
-            <div className="relative w-[108px] h-[42px]">
-              <img
-                src="https://c.animaapp.com/mkvwf206SqHHjG/assets/dgVEBclaou1On3YT6iSCEOOKkHg.png"
-                alt="Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </a>
-        </div>
-      </div>
+    <div className="flex items-center justify-center p-7">
+      <img
+        src="/nexa-icon-light.svg"
+        alt="Nexa"
+        className="h-[64px] w-[64px] object-contain"
+      />
     </div>
   </div>
 );
