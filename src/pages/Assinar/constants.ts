@@ -59,4 +59,4 @@ export const PLAN_BADGE: Record<PlanoNome, string | null> = {
   CLINICA: "Mais Completo",
 };
 
-export const ANGULAR_APP_URL = "https://nexasolutionstech.com.br";
+export const ANGULAR_APP_URL = "https://clinic.nexasolutionstech.com.br/login";
