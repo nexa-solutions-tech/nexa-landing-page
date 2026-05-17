@@ -1,7 +1,8 @@
 import type { AssinaturaPayload, PlanoAPI } from "../types";
 import { extractApiErrorMessage } from "@/utils/apiError";
+import { API_BASE_URL } from "@/utils/apiBaseUrl";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = API_BASE_URL;
 
 export async function fetchPlanos(token: string): Promise<PlanoAPI[]> {
   const response = await fetch(`${BASE_URL}/assinaturas/planos`, {

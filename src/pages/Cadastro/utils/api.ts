@@ -1,5 +1,6 @@
 import type { CadastroPayload, SuccessData } from "../types";
 import { extractApiErrorMessage } from "@/utils/apiError";
+import { API_BASE_URL } from "@/utils/apiBaseUrl";
 
 export async function registerClinica(data: CadastroPayload): Promise<SuccessData> {
   const payload = {
@@ -7,7 +8,7 @@ export async function registerClinica(data: CadastroPayload): Promise<SuccessDat
     cnpj: data.cnpj?.replace(/\D/g, "") ?? null,
   };
 
-  const response = await fetch("http://localhost:8080/api/cadastro", {
+  const response = await fetch(`${API_BASE_URL}/cadastro`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
