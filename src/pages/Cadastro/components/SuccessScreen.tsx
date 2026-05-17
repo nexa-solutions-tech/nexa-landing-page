@@ -1,3 +1,4 @@
+import { ANGULAR_APP_URL } from "@/pages/Assinar/constants";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CalendarDays, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -69,7 +70,7 @@ export const SuccessScreen = ({ data }: SuccessScreenProps) => {
 
       {/* CTA */}
       <a
-        href="https://nexasolutionstech.com.br/login"
+        href={`${ANGULAR_APP_URL}`}
         className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold font-inter transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_28px_rgba(99,102,241,0.45)]"
       >
         Acessar Plataforma

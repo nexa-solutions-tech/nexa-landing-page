@@ -84,7 +84,7 @@ export const SuccessScreen = ({ planoNome, tipoCobranca }: SuccessScreenProps) =
 
       {/* CTA */}
       <a
-        href={`${ANGULAR_APP_URL}/login`}
+        href={`${ANGULAR_APP_URL}`}
         className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold font-inter transition-all duration-200 shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_28px_rgba(99,102,241,0.45)]"
       >
         Acessar Plataforma
