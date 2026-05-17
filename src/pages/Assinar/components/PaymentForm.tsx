@@ -18,6 +18,8 @@ interface PaymentFormProps {
   apiError: string | null;
   /** CNPJ informado no cadastro da clínica, quando disponível. */
   clinicCnpj?: string;
+  /** E-mail informado no cadastro da clínica, quando disponível. */
+  clinicEmail?: string;
 }
 
 export const PaymentForm = ({
@@ -27,6 +29,7 @@ export const PaymentForm = ({
   onSubmit,
   apiError,
   clinicCnpj,
+  clinicEmail,
 }: PaymentFormProps) => {
   const {
     register,
@@ -41,6 +44,7 @@ export const PaymentForm = ({
     defaultValues: {
       tipoCobranca: "CREDIT_CARD",
       cpfCnpj: clinicCnpj ? maskCpfCnpj(clinicCnpj) : "",
+      holderEmail: clinicEmail ?? "",
     },
   });
 
