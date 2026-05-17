@@ -48,11 +48,14 @@ export const CadastroPage = () => {
       const result = await registerClinica(data);
 
       if (planoParam) {
-        // Repassa o CNPJ informado no cadastro para a etapa de pagamento
-        // pré-preencher o campo de documento do titular do cartão.
-        // sessionStorage evita expor o CNPJ na URL.
+        // Repassa CNPJ e e-mail informados no cadastro para a etapa de pagamento
+        // pré-preencher os campos do titular do cartão.
+        // sessionStorage evita expor esses dados na URL.
         if (data.cnpj) {
           sessionStorage.setItem("nexa.cadastro.cnpj", data.cnpj);
+        }
+        if (data.adminEmail) {
+          sessionStorage.setItem("nexa.cadastro.email", data.adminEmail);
         }
         const ciclo = cicloParam === "YEARLY" ? "YEARLY" : "MONTHLY";
         navigate(`/assinar?token=${result.token}&plano=${planoParam}&ciclo=${ciclo}`);

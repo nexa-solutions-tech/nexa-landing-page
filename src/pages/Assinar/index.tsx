@@ -27,14 +27,17 @@ export const AssinarPage = () => {
   const [ciclo, setCiclo] = useState<Ciclo>(
     searchParams.get("ciclo") === "YEARLY" ? "YEARLY" : "MONTHLY"
   );
-  // CNPJ informado no cadastro (quando o usuário veio do fluxo /cadastro -> /assinar).
-  // Usado para pré-preencher o documento do titular no pagamento.
+  // CNPJ e e-mail informados no cadastro (quando o usuário veio do fluxo /cadastro -> /assinar).
+  // Usados para pré-preencher o documento e o e-mail do titular no pagamento.
   // Não removemos aqui na leitura porque, em dev com StrictMode, o initializer
   // do useState pode rodar mais de uma vez — o que zeraria o storage antes de
   // o estado final ser commitado. A remoção acontece quando a assinatura é
   // criada com sucesso (ver handleSubmit).
   const [clinicCnpj] = useState<string | undefined>(
     () => sessionStorage.getItem("nexa.cadastro.cnpj") ?? undefined
+  );
+  const [clinicEmail] = useState<string | undefined>(
+    () => sessionStorage.getItem("nexa.cadastro.email") ?? undefined
   );
 
   // Extract token on mount
@@ -92,6 +95,7 @@ export const AssinarPage = () => {
     try {
       await createAssinatura(tokenRef.current!, payload);
       sessionStorage.removeItem("nexa.cadastro.cnpj");
+      sessionStorage.removeItem("nexa.cadastro.email");
       setTipoCobranca(payload.tipoCobranca);
       setStep(3);
     } catch (err) {
@@ -170,6 +174,7 @@ export const AssinarPage = () => {
                     onSubmit={handleSubmit}
                     apiError={apiError}
                     clinicCnpj={clinicCnpj}
+                    clinicEmail={clinicEmail}
                   />
                 )}
 
