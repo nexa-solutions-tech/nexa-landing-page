@@ -1,12 +1,18 @@
 import { ExternalLink } from "lucide-react";
 
 const navLinks = [
-  { label: "Planos", href: "./#pricing" },
-  { label: "Benefícios", href: "./#benefits" },
-  { label: "Contato", href: "./contact" },
-  { label: "Blog", href: "./blog" },
+  { label: "Planos", href: "#pricing" },
+  { label: "Benefícios", href: "#features" },
   { label: "Privacidade", href: "./privacy" },
 ];
+
+const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  if (href.startsWith("#")) {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const FooterLogo = () => (
   <a href="./" className="flex items-center">
@@ -33,6 +39,7 @@ export const FooterNav = () => {
         <div key={link.label} className="contents">
           <a
             href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
             className="text-violet-100/70 hover:text-white text-sm font-inter tracking-[-0.32px] transition-colors duration-200"
           >
             {link.label}

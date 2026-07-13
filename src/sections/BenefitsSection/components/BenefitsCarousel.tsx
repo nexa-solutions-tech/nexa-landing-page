@@ -7,11 +7,11 @@ export const BenefitsCarousel = () => {
     "Gestão Inteligente",
     "Planos Personalizáveis",
     "Insights Clínicos",
-    "Automação em Tempo Real",
+    "Controle de acesso",
     "Relatórios Instantâneos",
     "Prontuário Eletrônico",
     "Suporte Dedicado",
-    "Crescimento com IA",
+    "Histórico de Pacientes",
   ];
 
   // Duplicate items for seamless loop

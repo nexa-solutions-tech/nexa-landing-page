@@ -5,8 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 const menuItems = [
   { label: "Funcionalidades", href: "#features" },
   { label: "Planos", href: "#pricing" },
-  { label: "Blog", href: "./blog#changelog-section" },
-  { label: "Contato", href: "./contact#contact" },
+  { label: "Contato", href: "#footer" },
 ];
 
 export const MobileMenu = () => {

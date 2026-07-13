@@ -4,7 +4,7 @@ import { HeroDescription } from "@/sections/Hero/components/HeroDescription";
 import { HeroHeading } from "@/sections/Hero/components/HeroHeading";
 import { HeroLogos } from "@/sections/Hero/components/HeroLogos";
 import type { LucideIcon } from "lucide-react";
-import { Award, BarChart3, BrainCircuit, TrendingUp } from "lucide-react";
+import { BarChart3, CalendarClock, ClipboardList, FileSignature } from "lucide-react";
 
 
 interface HighlightCardProps {
@@ -52,22 +52,22 @@ const HighlightCard = ({ title, description, icon: Icon, iconColor, glowColor, s
 
 const highlightCards = [
   {
-    title: "Destaque-se",
-    description: "Dê destaque à sua clínica com um perfil premium e conecte-se com os melhores profissionais da saúde.",
-    icon: Award,
+    title: "Agenda em Tempo Real",
+    description: "Visualize e gerencie os agendamentos de todos os profissionais em um só lugar, com filtros por especialidade e horário.",
+    icon: CalendarClock,
     iconColor: "text-yellow-400",
     glowColor: "bg-gradient-to-r from-transparent via-yellow-500 to-transparent",
-    stat: "3x",
-    statLabel: "mais visibilidade",
+    stat: "100%",
+    statLabel: "em tempo real",
   },
   {
-    title: "Gestão Inteligente",
-    description: "Automatize agendamentos e prontuários com análise de desempenho em tempo real e monitoramento de receitas.",
-    icon: BrainCircuit,
+    title: "Prontuário Eletrônico",
+    description: "Registre avaliações e acompanhe a evolução dos pacientes com histórico clínico completo e organizado.",
+    icon: ClipboardList,
     iconColor: "text-violet-400",
     glowColor: "bg-gradient-to-r from-transparent via-violet-500 to-transparent",
-    stat: "80%",
-    statLabel: "menos tarefas manuais",
+    stat: "360°",
+    statLabel: "do histórico do paciente",
   },
   {
     title: "Decisões por Dados",
@@ -79,13 +79,13 @@ const highlightCards = [
     statLabel: "métricas em tempo real",
   },
   {
-    title: "Aumente o Faturamento",
-    description: "Converta mais pacientes com estratégias direcionadas, lembretes automáticos e ferramentas de marketing.",
-    icon: TrendingUp,
+    title: "Assinatura Digital",
+    description: "Profissionais assinam os documentos com seu próprio certificado, garantindo validade jurídica e mais agilidade.",
+    icon: FileSignature,
     iconColor: "text-emerald-400",
     glowColor: "bg-gradient-to-r from-transparent via-emerald-500 to-transparent",
-    stat: "+40%",
-    statLabel: "de receita média",
+    stat: "Validade",
+    statLabel: "jurídica garantida",
   },
 ];
 

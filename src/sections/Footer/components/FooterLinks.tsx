@@ -1,32 +1,35 @@
-import { ArrowUpRight } from "lucide-react";
+import { Instagram } from "lucide-react";
+
+const TikTokIcon = ({ size = 22 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M16.5 3c.3 2.2 1.6 3.6 3.7 3.8v2.5c-1.2.1-2.3-.2-3.6-.9v5.9c0 4.3-3.9 6.9-7.5 5.4-2.3-1-3.4-3.6-2.6-6 .7-2 2.6-3.2 4.9-3v2.6c-.4.1-.8.2-1.2.4-1.1.6-1.4 1.9-.8 2.9.6 1 1.9 1.2 2.8.5.6-.4.9-1.1.9-1.9V3h3z" />
+  </svg>
+);
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/" },
-  { label: "Twitter / X", href: "https://x.com/" },
-  { label: "Facebook", href: "https://www.facebook.com/" },
+  { label: "Instagram", href: "https://www.instagram.com/", Icon: Instagram },
+  { label: "TikTok", href: "https://www.tiktok.com/", Icon: TikTokIcon },
 ];
 
 export const FooterLinks = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full">
-      {socialLinks.map((link) => (
+    <div className="flex items-center justify-center gap-4 w-full">
+      {socialLinks.map(({ label, href, Icon }) => (
         <a
-          key={link.label}
-          href={link.href}
+          key={label}
+          href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex-1 flex flex-col gap-4 md:gap-6 min-w-0 md:min-w-[284px]"
+          aria-label={label}
+          className="group flex items-center justify-center w-12 h-12 rounded-full border border-neutral-800 text-violet-100/70 hover:text-white hover:border-neutral-600 transition-colors duration-200"
         >
-          <div className="h-px w-full bg-neutral-800" />
-          <div className="flex items-center justify-between">
-            <span className="text-violet-100/70 text-base font-inter tracking-[-0.32px] group-hover:text-white transition-colors duration-200">
-              {link.label}
-            </span>
-            <ArrowUpRight
-              size={20}
-              className="text-violet-100/70 group-hover:text-white transition-colors duration-200"
-            />
-          </div>
+          <Icon size={22} />
         </a>
       ))}
     </div>

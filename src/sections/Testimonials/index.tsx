@@ -48,7 +48,7 @@ const testimonials = [
     },
   },
   {
-    text: "Produto incrível! O faturamento automático com TISS facilitou demais nossa vida administrativa.",
+    text: "Produto incrível! A assinatura digital com nosso próprio certificado agilizou demais a rotina dos profissionais.",
     rating: 5.0,
     user: {
       name: "Dra. Juliana Ferreira",

@@ -7,9 +7,9 @@ const faqs = [
       "O NexaClinic é uma plataforma completa de gestão para clínicas e consultórios. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
   },
   {
-    question: "Posso integrar com convênios e planos de saúde?",
+    question: "É possível assinar documentos digitalmente?",
     answer:
-      "Sim! O sistema é totalmente compatível com TISS e permite faturamento automatizado para convênios e planos de saúde.",
+      "Sim! Os profissionais podem assinar digitalmente os documentos usando seu próprio certificado, garantindo validade jurídica e mais praticidade no dia a dia da clínica.",
   },
   {
     question: "O sistema funciona em dispositivos móveis?",

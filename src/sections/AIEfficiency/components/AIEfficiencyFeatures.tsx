@@ -1,15 +1,15 @@
 const features = [
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-9.svg",
-    title: "Seguro & Escalável",
+    title: "Lembretes Automáticos",
     description:
-      "Criptografia de nível empresarial protege suas informações, enquanto ferramentas flexíveis se adaptam às necessidades da sua clínica.",
+      "Envie lembretes de consulta por WhatsApp de forma automática e reduza as faltas, sem esforço manual da recepção.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-10.svg",
-    title: "Insights Acionáveis",
+    title: "Confirmação em Tempo Real",
     description:
-      "Utilize análises inteligentes para identificar tendências, prever resultados e otimizar o fluxo de trabalho da sua clínica.",
+      "Os pacientes confirmam ou cancelam pela própria mensagem e a agenda de todos os profissionais é atualizada na hora.",
   },
 ];
 

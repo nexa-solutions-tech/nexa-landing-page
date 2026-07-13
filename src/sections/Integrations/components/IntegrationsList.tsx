@@ -1,4 +1,4 @@
-import { Calendar, FileText, Mail, MessageCircle, type LucideIcon } from "lucide-react";
+import { Calendar, FileSignature, FileText, Mail, MessageCircle, type LucideIcon } from "lucide-react";
 
 interface Integration {
   icon: LucideIcon;
@@ -13,20 +13,25 @@ const integrations: Integration[] = [
     description: "Lembretes automáticos via WhatsApp para seus pacientes.",
   },
   {
-    icon: Calendar,
-    label: "Google Calendar",
-    description: "Sincronize agendamentos com Google Agenda e outros calendários.",
+    icon: FileSignature,
+    label: "Assinatura Digital",
+    description: "Profissionais podem assinar digitalmente os documentos com validade jurídica.",
   },
-  {
-    icon: FileText,
-    label: "TISS",
-    description: "Integre com convênios e sistemas de faturamento TISS.",
-  },
-  {
-    icon: Mail,
-    label: "Gmail",
-    description: "Envie confirmações e comunicados direto pelo Gmail da clínica.",
-  },
+  // {
+  //   icon: Calendar,
+  //   label: "Google Calendar",
+  //   description: "Sincronize agendamentos com Google Agenda e outros calendários.",
+  // },
+  // {
+  //   icon: FileText,
+  //   label: "TISS",
+  //   description: "Integre com convênios e sistemas de faturamento TISS.",
+  // },
+  // {
+  //   icon: Mail,
+  //   label: "Gmail",
+  //   description: "Envie confirmações e comunicados direto pelo Gmail da clínica.",
+  // },
 ];
 
 const IntegrationCard = ({

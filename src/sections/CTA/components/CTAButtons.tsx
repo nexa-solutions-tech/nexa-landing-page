@@ -6,8 +6,8 @@ export const CTAButtons = () => {
       <Button href="/cadastro" variant="primary">
         Começar Gratuitamente
       </Button>
-      <Button href="./contact" variant="secondary">
-        Agendar Demonstração
+      <Button href="./#pricing" variant="secondary">
+        Assinar
       </Button>
     </div>
   );

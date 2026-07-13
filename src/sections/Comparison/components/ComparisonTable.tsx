@@ -1,19 +1,19 @@
 // Features for NexaClinic (positive)
 const nexaClinicFeatures = [
-  "Colaboração fácil entre profissionais",
-  "Análise de dados integrada",
-  "Automação de processos",
-  "Automação de processos",
-  "Automação de processos",
+  "Prontuário eletrônico com avaliações e evoluções centralizadas",
+  "Assinatura digital com certificado e validade jurídica",
+  "Agenda multiprofissional em tempo real",
+  "Convênios cadastrados e vinculados a cada atendimento",
+  "Controle de acesso por perfil de usuário",
 ];
 
 // Features for Others (negative)
 const othersFeatures = [
-  "Colaboração limitada entre profissionais",
-  "Opções rígidas e não escaláveis",
-  "Funcionalidades básicas de dashboard",
-  "Falta de análises avançadas",
-  "Interfaces desatualizadas e complexas",
+  "Registros dispersos em planilhas e papéis",
+  "Documentos impressos, sem validade digital",
+  "Agendas manuais e sujeitas a conflitos",
+  "Convênios anotados à parte, sem vínculo ao atendimento",
+  "Acesso sem controle granular de permissões",
 ];
 
 // Divider line component

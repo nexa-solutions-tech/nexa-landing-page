@@ -22,9 +22,9 @@ const benefits = [
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-8.svg",
-    title: "Módulo Financeiro",
+    title: "Relatórios de Receita",
     description:
-      "Controle completo de receitas, despesas e faturamento. Gestão de pagamentos, comissões e relatórios financeiros detalhados.",
+      "Acompanhe a receita da clínica com relatórios por período. Visualize o desempenho financeiro dos atendimentos de forma simples.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",
@@ -42,7 +42,7 @@ const benefits = [
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-6.svg",
     title: "Gestão de Convênios",
     description:
-      "Cadastre convênios, tabelas de preços e regras específicas. Automatize o faturamento e acompanhe repasses de forma simplificada.",
+      "Cadastre convênios com registro ANS e período de carência, e vincule-os diretamente aos atendimentos dos pacientes.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-7.svg",

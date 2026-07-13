@@ -24,7 +24,7 @@ const StarRating = ({
   const hasHalfStar = rating % 1 !== 0;
 
   return (
-    <div className="hidden md:flex items-center gap-2">
+    <div className="flex items-center gap-2">
       <span className="text-violet-100/70 font-medium">
         {rating.toFixed(1)}
       </span>
@@ -56,7 +56,7 @@ const UserInfo = ({
   imageUrl: string;
   imageAlt?: string;
 }) => (
-  <div className="hidden md:flex items-center gap-3 w-full">
+  <div className="flex items-center gap-3 w-full">
     <div className="relative w-10 h-10 shrink-0 rounded-full overflow-hidden">
       <img
         src={imageUrl}
@@ -83,7 +83,7 @@ export const TestimonialCard = ({
   user,
 }: TestimonialCardProps) => {
   return (
-    <div className="hidden md:flex relative basis-0 grow shrink-0 min-h-[278px] max-w-[440px] min-w-[280px] w-px rounded-2xl shadow-[rgba(41,52,255,0.3)_0px_1px_35px_0px]">
+    <div className="flex relative basis-0 grow shrink-0 min-h-[278px] max-w-[440px] min-w-[280px] w-full md:w-px rounded-2xl shadow-[rgba(41,52,255,0.3)_0px_1px_35px_0px]">
       <div className="relative flex flex-col w-full overflow-hidden rounded-2xl bg-[linear-gradient(136deg,rgb(138,165,255)_-94%,rgb(0,0,0)_70%)] p-px">
         <div className="relative flex flex-col w-full h-full rounded-2xl bg-[radial-gradient(96%_96%_at_16%_21.8%,rgb(18,20,38)_0%,rgb(0,0,0)_100%)] p-8">
           <div className="flex flex-col z-[2] justify-between h-full">

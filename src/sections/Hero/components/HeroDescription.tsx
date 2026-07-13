@@ -9,7 +9,7 @@ export const HeroDescription = () => {
     >
       <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-center font-inter">
         Gerencie agendamentos, prontuários eletrônicos, evolução de pacientes e
-        faturamento em um só lugar. Simplifique sua rotina e foque no que
+        relatórios em um só lugar. Simplifique sua rotina e foque no que
         importa: cuidar dos seus pacientes.
       </p>
     </FadeIn>
