@@ -1,5 +1,6 @@
 import { Eye, EyeOff } from "lucide-react";
 import type { UseFormRegisterReturn } from "react-hook-form";
+import { FieldInfo } from "./FieldInfo";
 
 interface FormInputProps {
   id: string;
@@ -18,6 +19,8 @@ interface FormInputProps {
   onTogglePassword?: () => void;
   disabled?: boolean;
   optional?: boolean;
+  /** Texto de ajuda exibido num tooltip (ícone "i") ao lado do label. */
+  info?: string;
 }
 
 export const FormInput = ({
@@ -37,6 +40,7 @@ export const FormInput = ({
   onTogglePassword,
   disabled = false,
   optional = false,
+  info,
 }: FormInputProps) => {
   const inputType = showPasswordToggle ? (passwordVisible ? "text" : "password") : type;
 
@@ -53,9 +57,12 @@ export const FormInput = ({
         >
           {label}
         </label>
-        {optional && (
-          <span className="text-xs text-neutral-500">Opcional</span>
-        )}
+        <div className="flex items-center gap-2">
+          {optional && (
+            <span className="text-xs text-neutral-500">Opcional</span>
+          )}
+          {info && <FieldInfo text={info} />}
+        </div>
       </div>
 
       <div className="relative">

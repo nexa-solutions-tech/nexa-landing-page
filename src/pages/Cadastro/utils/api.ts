@@ -6,6 +6,7 @@ export async function registerClinica(data: CadastroPayload): Promise<SuccessDat
   const payload = {
     ...data,
     cnpj: data.cnpj?.replace(/\D/g, "") ?? null,
+    adminCelular: data.adminCelular?.replace(/\D/g, "") ?? null,
   };
 
   const response = await fetch(`${API_BASE_URL}/cadastro`, {

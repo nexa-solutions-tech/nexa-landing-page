@@ -15,6 +15,7 @@ import {
 } from "./types";
 import { registerClinica } from "./utils/api";
 import { maskCnpj } from "./utils/cnpj";
+import { maskCelular } from "./utils/phone";
 
 export const CadastroPage = () => {
   const [searchParams] = useSearchParams();
@@ -36,6 +37,7 @@ export const CadastroPage = () => {
     defaultValues: {
       adminNome: "",
       adminEmail: "",
+      adminCelular: "",
       nomeClinica: "",
       cnpj: "",
       adminSenha: "",
@@ -131,23 +133,45 @@ export const CadastroPage = () => {
                         Seus dados
                       </p>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div className="flex flex-col gap-5">
                         <FormInput
                           id="adminNome"
                           label="Seu nome"
                           registration={register("adminNome")}
                           error={errors.adminNome?.message}
-                          placeholder="João Silva"
+                          placeholder="Digite seu nome"
                         />
 
-                        <FormInput
-                          id="adminEmail"
-                          label="E-mail"
-                          type="email"
-                          registration={register("adminEmail")}
-                          error={errors.adminEmail?.message}
-                          placeholder="joao@clinica.com.br"
-                        />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                          <FormInput
+                            id="adminEmail"
+                            label="E-mail"
+                            type="email"
+                            registration={register("adminEmail")}
+                            error={errors.adminEmail?.message}
+                            placeholder="Digite seu e-mail"
+                            info="Usaremos seu e-mail para enviar notificações de cobrança e avisos da assinatura."
+                          />
+
+                          <FormInput
+                            id="adminCelular"
+                            label="Celular"
+                            type="text"
+                            inputMode="tel"
+                            registration={{
+                              ...register("adminCelular"),
+                              onChange: async (e: React.ChangeEvent<HTMLInputElement>) => {
+                                setValue("adminCelular", maskCelular(e.target.value), {
+                                  shouldValidate: !!errors.adminCelular,
+                                });
+                              },
+                            }}
+                            error={errors.adminCelular?.message}
+                            placeholder="Digite seu celular"
+                            info="Usaremos seu celular para enviar notificações de cobrança e avisos por SMS."
+                            optional
+                          />
+                        </div>
                       </div>
 
                       {/* Section: Sua clínica */}
@@ -162,7 +186,7 @@ export const CadastroPage = () => {
                             label="Nome da clínica"
                             registration={register("nomeClinica")}
                             error={errors.nomeClinica?.message}
-                            placeholder="Ex: Clínica São Paulo"
+                            placeholder="Digite o nome da clínica"
                           />
 
                           <FormInput
@@ -177,7 +201,7 @@ export const CadastroPage = () => {
                               },
                             }}
                             error={errors.cnpj?.message}
-                            placeholder="00.000.000/0000-00"
+                            placeholder="Digite o CNPJ"
                             hint="Você pode adicionar depois"
                             optional
                           />

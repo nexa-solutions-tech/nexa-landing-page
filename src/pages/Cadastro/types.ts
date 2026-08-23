@@ -7,6 +7,15 @@ export const cadastroSchema = z.object({
     .string()
     .min(1, "E-mail é obrigatório")
     .email("E-mail inválido"),
+  adminCelular: z
+    .string()
+    .transform((v) => v.trim() || undefined)
+    .pipe(
+      z
+        .string()
+        .refine((v) => v.replace(/\D/g, "").length === 11, "Informe um celular válido com DDD")
+        .optional()
+    ),
   nomeClinica: z.string().min(2, "Informe o nome da sua clínica"),
   cnpj: z
     .string()
