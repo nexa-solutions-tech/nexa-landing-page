@@ -5,8 +5,8 @@ export const TestimonialsHeader = () => {
   return (
     <SectionHeader
       badge={<SectionBadge>DEPOIMENTOS</SectionBadge>}
-      title="Amado por profissionais da saúde"
-      description="Veja o que profissionais de todo o Brasil estão dizendo sobre nós"
+      title="O que dizem os profissionais de reabilitação"
+      description="Profissionais de diferentes especialidades e gestores de clínicas multidisciplinares em todo o Brasil"
     />
   );
 };

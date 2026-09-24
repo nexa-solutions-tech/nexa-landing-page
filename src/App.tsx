@@ -9,6 +9,7 @@ import { Hero } from "@/sections/Hero";
 import { Integrations } from "@/sections/Integrations";
 import { Navbar } from "@/sections/Navbar";
 import { Pricing } from "@/sections/Pricing";
+import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Stats } from "@/sections/Stats";
 import { Testimonials } from "@/sections/Testimonials";
 
@@ -22,6 +23,7 @@ export const App = () => {
       <main className="relative flex flex-col">
         <Hero />
         <BenefitsSection />
+        <ProductShowcase />
         <Testimonials />
         <Stats />
         <Pricing />

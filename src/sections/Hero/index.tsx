@@ -4,7 +4,7 @@ import { HeroDescription } from "@/sections/Hero/components/HeroDescription";
 import { HeroHeading } from "@/sections/Hero/components/HeroHeading";
 import { HeroLogos } from "@/sections/Hero/components/HeroLogos";
 import type { LucideIcon } from "lucide-react";
-import { BarChart3, CalendarClock, ClipboardList, FileSignature } from "lucide-react";
+import { CalendarClock, FileSignature, LayoutDashboard, Users } from "lucide-react";
 
 
 interface HighlightCardProps {
@@ -52,8 +52,8 @@ const HighlightCard = ({ title, description, icon: Icon, iconColor, glowColor, s
 
 const highlightCards = [
   {
-    title: "Agenda em Tempo Real",
-    description: "Visualize e gerencie os agendamentos de todos os profissionais em um só lugar, com filtros por especialidade e horário.",
+    title: "Agenda Multiprofissional",
+    description: "Toda a sua equipe multidisciplinar em uma única tela. Visualize e gerencie os agendamentos de todas as especialidades sem conflitos de horário.",
     icon: CalendarClock,
     iconColor: "text-yellow-400",
     glowColor: "bg-gradient-to-r from-transparent via-yellow-500 to-transparent",
@@ -61,26 +61,26 @@ const highlightCards = [
     statLabel: "em tempo real",
   },
   {
-    title: "Prontuário Eletrônico",
-    description: "Registre avaliações e acompanhe a evolução dos pacientes com histórico clínico completo e organizado.",
-    icon: ClipboardList,
+    title: "Prontuário Compartilhado",
+    description: "O registro de um profissional fica visível para os demais no próximo atendimento. Um paciente, um prontuário, toda a equipe.",
+    icon: Users,
     iconColor: "text-violet-400",
     glowColor: "bg-gradient-to-r from-transparent via-violet-500 to-transparent",
     stat: "360°",
     statLabel: "do histórico do paciente",
   },
   {
-    title: "Decisões por Dados",
-    description: "Seu guia analítico para tomar decisões estratégicas e melhorar a qualidade do atendimento na sua clínica.",
-    icon: BarChart3,
+    title: "Dashboard Clínico",
+    description: "Acompanhe a ocupação de cada especialidade, a evolução dos pacientes e a produtividade da equipe multidisciplinar em tempo real.",
+    icon: LayoutDashboard,
     iconColor: "text-blue-400",
     glowColor: "bg-gradient-to-r from-transparent via-blue-500 to-transparent",
     stat: "100+",
-    statLabel: "métricas em tempo real",
+    statLabel: "métricas disponíveis",
   },
   {
     title: "Assinatura Digital",
-    description: "Profissionais assinam os documentos com seu próprio certificado, garantindo validade jurídica e mais agilidade.",
+    description: "Cada profissional assina os documentos com seu próprio certificado: laudos, evoluções e relatórios com validade jurídica garantida.",
     icon: FileSignature,
     iconColor: "text-emerald-400",
     glowColor: "bg-gradient-to-r from-transparent via-emerald-500 to-transparent",

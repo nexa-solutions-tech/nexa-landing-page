@@ -11,8 +11,8 @@ export const Features = () => {
         <FadeIn direction="up" delay={0.1} className="flex-1">
           <FeatureCard
             variant="variant1"
-            title="Destaque sua Clínica"
-            description="Eleve sua marca com gestão profissional e conecte-se com os melhores resultados."
+            title="Sua clínica, sua equipe"
+            description="Cadastre cada profissional da equipe com suas especialidades e permissões. Toda a sua equipe multidisciplinar, em qualquer área, no mesmo sistema."
             avatars={[
               {
                 src: "https://c.animaapp.com/mkvwf206SqHHjG/assets/hB5bi4QrUW6ADBo4x4YHYj1FyyY.svg",
@@ -41,8 +41,8 @@ export const Features = () => {
         <FadeIn direction="up" delay={0.2} className="flex-[2]">
           <FeatureCard
             variant="variant2"
-            title="Insights da Clínica"
-            description="Automatize tudo, desde otimização do fluxo de trabalho até análise de evolução dos pacientes."
+            title="Agenda por especialidade"
+            description="Visualize a agenda de toda a equipe multidisciplinar. Agende o mesmo paciente para diferentes especialidades sem conflitos."
             avatars={[
               {
                 src: "https://c.animaapp.com/mkvwf206SqHHjG/assets/0yM6cBXNvZODiQkuDOtWDmSLT88.svg",
@@ -60,12 +60,13 @@ export const Features = () => {
               },
             ]}
             categories={[
-              { name: "Clínicas Médicas" },
-              { name: "Consultórios" },
-              { name: "Estúdios de Pilates" },
-              { name: "Centros de Reabilitação" },
-              { name: "Clínicas Esportivas" },
-              { name: "Espaços de Saúde" },
+              { name: "Fisioterapia" },
+              { name: "Fonoaudiologia" },
+              { name: "Terapia Ocupacional" },
+              { name: "Psicologia" },
+              { name: "Nutrição" },
+              { name: "Neurologia" },
+              { name: "Reabilitação Multidisciplinar" },
             ]}
             chartImageSrc="https://c.animaapp.com/mkvwf206SqHHjG/assets/1IaFtL4zGely9VkSxFrTkS3EEu0.svg"
           />
@@ -74,8 +75,8 @@ export const Features = () => {
       <FadeIn direction="up" delay={0.3} fullWidth>
         <FeatureCard
           variant="variant3"
-          title="Soluções de Dados Clínicos"
-          description="Seu guia baseado em dados para tomar decisões clínicas informadas."
+          title="Evolução integrada por paciente"
+          description="Todos os profissionais registram no mesmo prontuário. A evolução do paciente é acompanhada de forma contínua por toda a equipe multidisciplinar."
           avatars={[
             {
               src: "https://c.animaapp.com/mkvwf206SqHHjG/assets/hB5bi4QrUW6ADBo4x4YHYj1FyyY.svg",

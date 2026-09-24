@@ -17,7 +17,7 @@ export const Stats = () => {
           <SectionHeader
             badge={<StatsHeader />}
             title="Números que Falam por Si"
-            description="Milhares de clínicas já transformaram sua gestão com o NexaClinic"
+            description="Centenas de profissionais de reabilitação já usam o NexaClinic para cuidar melhor dos seus pacientes"
             className="z-[3]"
           />
         </FadeIn>

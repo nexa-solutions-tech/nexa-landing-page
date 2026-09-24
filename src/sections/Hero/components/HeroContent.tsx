@@ -11,7 +11,7 @@ const ProfileAvatar = ({ src, index }: { src: string; index: number }) => (
   <div className="relative h-7 w-7 -ml-3 first:ml-0 z-[1] overflow-hidden rounded-full">
     <img
       src={src}
-      alt={`Cliente ${index + 1}`}
+      alt={`Profissional ${index + 1}`}
       className="absolute inset-0 h-full w-full object-cover rounded-full"
     />
   </div>
@@ -28,18 +28,15 @@ const AvatarStack = () => (
 const ClientCount = () => (
   <div className="hidden md:flex items-center gap-1 overflow-hidden">
     <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] whitespace-nowrap font-inter">
-      Junte-se a
+      Confiado por
     </p>
     <div className="flex items-center gap-0.5 h-6 overflow-hidden">
       <span className="text-white text-sm leading-[22.4px] font-inter">
-        2.500
+        centenas
       </span>
-      <p className="text-white tracking-[-0.32px] leading-[25.6px] whitespace-nowrap font-inter">
-        +
-      </p>
     </div>
     <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] whitespace-nowrap font-inter">
-      clínicas satisfeitas
+      de profissionais de reabilitação
     </p>
   </div>
 );

@@ -5,8 +5,8 @@ export const CTAHeader = () => {
   return (
     <SectionHeader
       badge={<SectionBadge>O QUE VOCÊ ESTÁ ESPERANDO</SectionBadge>}
-      title="Transforme sua Clínica Agora"
-      description="Comece hoje mesmo a modernizar sua clínica com o sistema de gestão mais completo do mercado."
+      title="Sua equipe multidisciplinar merece um sistema à altura"
+      description="14 dias grátis. Sem cartão de crédito. Configure sua equipe multidisciplinar em minutos."
       maxDescriptionWidth="none"
     />
   );

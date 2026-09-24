@@ -1,19 +1,19 @@
-// Features for NexaClinic (positive)
+// Features for NexaClinic (positive): multidisciplinary angle
 const nexaClinicFeatures = [
-  "Prontuário eletrônico com avaliações e evoluções centralizadas",
-  "Assinatura digital com certificado e validade jurídica",
-  "Agenda multiprofissional em tempo real",
-  "Convênios cadastrados e vinculados a cada atendimento",
-  "Controle de acesso por perfil de usuário",
+  "Prontuário único compartilhado entre todos os especialistas do mesmo paciente",
+  "Agenda multiprofissional em tempo real, sem conflitos entre especialidades",
+  "Assinatura digital com certificado próprio de cada profissional",
+  "Convênios vinculados ao atendimento de cada especialidade",
+  "Controle de acesso granular por perfil de usuário",
 ];
 
-// Features for Others (negative)
+// Features for Others (negative): what generic systems do poorly
 const othersFeatures = [
-  "Registros dispersos em planilhas e papéis",
-  "Documentos impressos, sem validade digital",
-  "Agendas manuais e sujeitas a conflitos",
-  "Convênios anotados à parte, sem vínculo ao atendimento",
-  "Acesso sem controle granular de permissões",
+  "Registros isolados por profissional, sem visão integrada do paciente",
+  "Agendas separadas por área, gestão manual de conflitos e sobreposições",
+  "Documentos impressos ou assinados fora do sistema, sem rastreabilidade",
+  "Convênios anotados à parte, sem vínculo com o atendimento clínico",
+  "Acesso sem controle granular, expondo dados sensíveis desnecessariamente",
 ];
 
 // Divider line component
@@ -83,7 +83,7 @@ const OthersHeader = () => (
       className="w-6 h-6 text-white"
     />
     <h3 className="text-white text-2xl font-medium font-inter tracking-[-0.48px] leading-7 text-center whitespace-nowrap">
-      Outros
+      Sistemas Genéricos
     </h3>
   </div>
 );

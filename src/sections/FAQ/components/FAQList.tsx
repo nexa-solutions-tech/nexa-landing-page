@@ -2,19 +2,29 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "O que é o NexaClinic?",
+    question: "O NexaClinic foi feito para clínicas multidisciplinares?",
     answer:
-      "O NexaClinic é uma plataforma completa de gestão para clínicas e consultórios. Com design moderno e funcionalidades intuitivas, ajudamos sua clínica a se destacar e crescer de forma organizada.",
+      "Sim. O sistema foi construído para o modelo onde vários profissionais de diferentes especialidades atendem os mesmos pacientes. O prontuário é centralizado por paciente, não por profissional, então cada especialista enxerga o histórico completo do paciente.",
   },
   {
-    question: "É possível assinar documentos digitalmente?",
+    question: "Como funciona o prontuário compartilhado entre profissionais?",
     answer:
-      "Sim! Os profissionais podem assinar digitalmente os documentos usando seu próprio certificado, garantindo validade jurídica e mais praticidade no dia a dia da clínica.",
+      "Cada atendimento é registrado dentro do prontuário do paciente, não importa a especialidade. Todos os profissionais autorizados têm acesso ao histórico clínico completo (avaliações, evoluções e documentos), sem precisar de cópias ou repasse manual de informações entre a equipe.",
+  },
+  {
+    question: "Posso controlar o que cada profissional acessa no sistema?",
+    answer:
+      "Sim. O controle de permissões é granular: você define exatamente o que cada usuário pode ver ou editar. O recepcionista agenda sem acessar prontuários; o profissional visualiza seus pacientes; o gestor tem visão completa da clínica. Cada um trabalha no seu escopo.",
+  },
+  {
+    question: "A assinatura digital funciona para todos os profissionais da equipe?",
+    answer:
+      "Sim. Cada profissional usa seu próprio certificado digital (.pfx) para assinar documentos, como laudos, evoluções e relatórios de alta. Todos os documentos têm validade jurídica e ficam registrados no sistema, sem necessidade de impressão.",
   },
   {
     question: "O sistema funciona em dispositivos móveis?",
     answer:
-      "Sim! O NexaClinic é 100% responsivo e funciona perfeitamente em celulares e tablets, permitindo que você acesse de qualquer lugar.",
+      "Sim. O NexaClinic é 100% responsivo e funciona em celulares e tablets, permitindo que qualquer profissional da equipe acesse o prontuário do paciente de onde estiver.",
   },
 ];
 
@@ -57,7 +67,7 @@ const FAQItem = ({
       {/* Answer (collapsible) */}
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"
+          isOpen ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"
         }`}
       >
         <p className="text-violet-100/70 text-base font-inter tracking-[-0.32px] leading-[25.6px] text-left">

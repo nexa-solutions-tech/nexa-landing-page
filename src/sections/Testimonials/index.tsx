@@ -9,61 +9,61 @@ const HALF_STAR_ICON = "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-17.svg
 
 const testimonials = [
   {
-    text: "O sistema revolucionou a gestão da minha clínica. Agendamentos automáticos e prontuários digitais salvaram horas do meu dia!",
-    rating: 5.0,
-    user: {
-      name: "Dra. Ana Beatriz",
-      title: "Ortopedista",
-      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/27.png",
-      imageAlt: "foto do usuário",
-    },
-  },
-  {
-    text: "A integração com WhatsApp para lembretes reduziu em 70% as faltas dos meus pacientes. Incrível!",
-    rating: 5.0,
-    user: {
-      name: "Dr. Carlos Eduardo",
-      title: "Clínica Vida Saúde",
-      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/19.png",
-    },
-  },
-  {
-    text: "Excelente para organização! Os relatórios de evolução ajudam muito no acompanhamento dos pacientes.",
-    rating: 4.8,
-    hasHalfStar: true,
-    user: {
-      name: "Dra. Marina Costa",
-      title: "Médica Esportiva",
-      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/1.avif",
-    },
-  },
-  {
-    text: "A melhor solução que já usei! Transformou completamente a gestão da nossa equipe de profissionais.",
-    rating: 5.0,
-    user: {
-      name: "Dr. Roberto Almeida",
-      title: "Diretor Clínico",
-      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/46.png",
-      imageAlt: "foto do usuário",
-    },
-  },
-  {
-    text: "Produto incrível! A assinatura digital com nosso próprio certificado agilizou demais a rotina dos profissionais.",
+    text: "Antes, cada profissional usava um sistema diferente. Hoje toda a equipe registra no mesmo prontuário do paciente. A comunicação entre as especialidades mudou completamente.",
     rating: 5.0,
     user: {
       name: "Dra. Juliana Ferreira",
-      title: "Clínica Reabilitar",
+      title: "Diretora, Clínica Reabilitar",
       imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/31.jpg",
       imageAlt: "foto do usuário",
     },
   },
   {
-    text: "Design incrível e muito funcional! Superou todas as nossas expectativas na clínica.",
+    text: "A agenda multiprofissional resolveu um problema que a gente tinha todo dia: conflito de horário entre especialidades diferentes para o mesmo paciente. Hoje é automático.",
     rating: 5.0,
     user: {
-      name: "Dr. Paulo Henrique",
-      title: "Clínica Centro Saúde",
-      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/32.png",
+      name: "Dr. Carlos Eduardo",
+      title: "Fisioterapeuta, Centro de Reabilitação CE",
+      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/19.png",
+    },
+  },
+  {
+    text: "Eu precisava ver o que outro profissional tinha registrado antes do meu atendimento. No NexaClinic isso está ali, no prontuário do paciente. Simples assim.",
+    rating: 4.8,
+    hasHalfStar: true,
+    user: {
+      name: "Dra. Ana Beatriz",
+      title: "Fonoaudióloga, Clínica Integrar Saúde",
+      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/27.png",
+      imageAlt: "foto do usuário",
+    },
+  },
+  {
+    text: "Gerencio uma equipe com profissionais de várias áreas. O controle de permissões me permite definir o que cada um acessa, e o dashboard me mostra a produtividade de cada especialidade.",
+    rating: 5.0,
+    user: {
+      name: "Dr. Roberto Almeida",
+      title: "Gestor Clínico, Instituto NeuroVida",
+      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/46.png",
+      imageAlt: "foto do usuário",
+    },
+  },
+  {
+    text: "A assinatura digital com meu próprio certificado foi um divisor de águas. Assino laudos diretamente no sistema, com validade jurídica, sem precisar imprimir nada.",
+    rating: 5.0,
+    user: {
+      name: "Dra. Marina Costa",
+      title: "Terapeuta Ocupacional, Clínica Movimento",
+      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/1.avif",
+    },
+  },
+  {
+    text: "Atendo alguns pacientes em casa, fora da clínica. Abro o NexaClinic pelo celular, confiro o histórico e registro a evolução na hora, sem precisar levar notebook nem passar tudo pro sistema depois.",
+    rating: 5.0,
+    user: {
+      name: "Dr. Rafael Nogueira",
+      title: "Fisioterapeuta, Atendimento Domiciliar",
+      imageUrl: "https://c.animaapp.com/mkvwf206SqHHjG/assets/16.png",
     },
   },
 ];
@@ -80,13 +80,13 @@ export const Testimonials = () => {
           <TestimonialsHeader />
         </FadeIn>
 
-        {/* Grid de Testimonials */}
-        <div className="relative flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 max-w-[1120px] w-full z-[2]">
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full z-[2]">
           {testimonials.map((testimonial, index) => (
             <FadeIn
               key={index}
               direction="up"
-              delay={0.1 + index * 0.1}
+              delay={0.1 * index}
               className="contents"
             >
               <TestimonialCard

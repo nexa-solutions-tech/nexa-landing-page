@@ -14,8 +14,8 @@ export const Comparison = () => {
         <FadeIn direction="up">
           <SectionHeader
             badge={<ComparisonHeader />}
-            title="Por que o NexaClinic se Destaca"
-            description="Veja como nos comparamos em performance e crescimento"
+            title="NexaClinic vs. sistemas genéricos"
+            description="Sistemas genéricos tratam cada profissional como uma agenda isolada. Na reabilitação multidisciplinar, isso não funciona."
             maxDescriptionWidth="none"
             className="z-[3]"
           />

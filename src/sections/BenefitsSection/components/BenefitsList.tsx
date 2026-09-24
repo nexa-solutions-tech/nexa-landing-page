@@ -1,54 +1,63 @@
 import { BenefitCard } from "@/components/BenefitCard";
 import { FadeIn } from "@/components/FadeIn";
 
+const mobileIconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect x='7' y='2' width='10' height='20' rx='2'/><line x1='11' y1='18' x2='13' y2='18'/></svg>`;
+const mobileIconDataUri = `data:image/svg+xml,${encodeURIComponent(mobileIconSvg)}`;
+
 const benefits = [
   {
-    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-9.svg",
-    title: "Agenda Moderna",
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",
+    title: "Prontuário Compartilhado",
     description:
-      "Agenda profissional com filtros avançados por profissional, especialidade e horário. Visualize e gerencie todos os atendimentos em tempo real.",
+      "Cada especialista da sua equipe registra no mesmo prontuário do paciente. O que um profissional documenta, todos os outros enxergam. Sem cópias, sem retrabalho, sem informação perdida.",
+  },
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-9.svg",
+    title: "Agenda Multiprofissional",
+    description:
+      "Visualize os horários de toda a equipe em uma única tela. Agende o mesmo paciente para diferentes especialidades no mesmo dia sem risco de conflito, com lembretes automáticos via WhatsApp.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",
-    title: "Avaliações & Evoluções",
+    title: "Evolução Integrada",
     description:
-      "Registre avaliações completas e acompanhe a evolução dos pacientes com histórico detalhado. Documentação clínica organizada e acessível.",
+      "Cada profissional registra a sua evolução e todos têm acesso ao histórico completo. A progressão do paciente é documentada de forma contínua, por toda a equipe, dentro do mesmo sistema.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-3.svg",
     title: "Dashboard & Relatórios",
     description:
-      "Painéis visuais com métricas de pacientes, atendimentos e produtividade dos profissionais. Tome decisões baseadas em dados reais.",
+      "Acompanhe a ocupação de cada especialidade, o volume de atendimentos por profissional e a evolução clínica dos pacientes. Decisões baseadas em dados reais da sua clínica.",
   },
   {
-    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-8.svg",
-    title: "Relatórios de Receita",
+    icon: mobileIconDataUri,
+    title: "Funciona em Qualquer Aparelho",
     description:
-      "Acompanhe a receita da clínica com relatórios por período. Visualize o desempenho financeiro dos atendimentos de forma simples.",
-  },
-  {
-    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",
-    title: "Cadastros Completos",
-    description:
-      "Gerencie pacientes, profissionais, procedimentos, convênios, feriados e documentos em um só lugar. Tudo organizado e fácil de encontrar.",
+      "Computador, celular ou tablet: não importa qual. Veja a agenda, registre uma evolução ou consulte o histórico do paciente de onde você estiver.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-5.svg",
     title: "Assinatura Digital",
     description:
-      "Assinatura eletrônica com certificados .pfx para profissionais. Documentos com validade jurídica e conformidade com normas do setor.",
+      "Cada profissional assina laudos e evoluções com seu próprio certificado digital. Documentos com validade jurídica, sem papel, sem deslocamento. Conformidade garantida para toda a equipe.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-6.svg",
     title: "Gestão de Convênios",
     description:
-      "Cadastre convênios com registro ANS e período de carência, e vincule-os diretamente aos atendimentos dos pacientes.",
+      "Cadastre convênios e vincule-os diretamente aos atendimentos de cada especialidade. Controle de carência, registro ANS e faturamento por profissional sem planilha extra.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-7.svg",
     title: "Controle de Permissões",
     description:
-      "Configure níveis de acesso personalizados para cada usuário. Defina quem pode ver, editar ou gerenciar cada área do sistema.",
+      "Configure o que cada usuário pode ver e editar. O recepcionista agenda mas não acessa prontuário; o profissional vê seus pacientes; o gestor enxerga tudo. Cada um no seu escopo.",
+  },
+  {
+    icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-8.svg",
+    title: "Relatórios de Receita",
+    description:
+      "Acompanhe o faturamento por especialidade, por profissional e por período. Identifique quais áreas crescem e onde há gargalos, sem precisar montar planilha no fim do mês.",
   },
 ];
 

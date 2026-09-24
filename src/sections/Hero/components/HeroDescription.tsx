@@ -5,12 +5,10 @@ export const HeroDescription = () => {
     <FadeIn
       direction="up"
       delay={0.2}
-      className="relative flex flex-col max-w-[540px] w-full"
+      className="relative flex flex-col max-w-[580px] w-full"
     >
       <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] text-center font-inter">
-        Gerencie agendamentos, prontuários eletrônicos, evolução de pacientes e
-        relatórios em um só lugar. Simplifique sua rotina e foque no que
-        importa: cuidar dos seus pacientes.
+        Na reabilitação multidisciplinar, o mesmo paciente passa por diferentes especialidades ao longo do tratamento. O NexaClinic integra prontuários, agendas e evoluções de toda a sua equipe, para que cada profissional saiba exatamente o que o anterior registrou.
       </p>
     </FadeIn>
   );
