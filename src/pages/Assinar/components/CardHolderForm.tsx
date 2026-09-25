@@ -36,7 +36,7 @@ export const CardHolderForm = ({
           label="Nome completo"
           registration={register("holderName")}
           error={errors.holderName?.message}
-          placeholder="João Marcos Silva"
+          placeholder="Digite seu nome completo"
         />
 
         <FormInput
@@ -45,7 +45,7 @@ export const CardHolderForm = ({
           type="email"
           registration={register("holderEmail")}
           error={errors.holderEmail?.message}
-          placeholder="joao@email.com"
+          placeholder="Digite seu e-mail"
         />
       </div>
 
@@ -55,7 +55,7 @@ export const CardHolderForm = ({
           label="CPF/CNPJ do titular"
           registration={cpfCnpjRegistration}
           error={cpfCnpjError}
-          placeholder="000.000.000-00"
+          placeholder="Digite o CPF ou CNPJ"
           hint={cpfCnpjHint}
         />
 
@@ -69,7 +69,7 @@ export const CardHolderForm = ({
             },
           }}
           error={errors.holderPhone?.message}
-          placeholder="(11) 99999-0000"
+          placeholder="Digite seu telefone"
         />
       </div>
 
@@ -84,7 +84,7 @@ export const CardHolderForm = ({
             },
           }}
           error={errors.holderPostalCode?.message}
-          placeholder="00000-000"
+          placeholder="Digite o CEP"
         />
 
         <FormInput
@@ -94,7 +94,7 @@ export const CardHolderForm = ({
           maxLength={10}
           registration={register("holderAddressNumber")}
           error={errors.holderAddressNumber?.message}
-          placeholder="123"
+          placeholder="Digite o número"
         />
       </div>
     </div>

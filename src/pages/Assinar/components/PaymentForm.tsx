@@ -155,7 +155,7 @@ export const PaymentForm = ({
                 },
               }}
               error={errors.cpfCnpj?.message}
-              placeholder="000.000.000-00"
+              placeholder="Digite o CPF ou CNPJ"
               hint="Documento que aparecerá no boleto."
             />
           </div>

@@ -27,7 +27,7 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
           },
         }}
         error={errors.cardNumber?.message}
-        placeholder="0000 0000 0000 0000"
+        placeholder="Digite o número do cartão"
       />
 
       <FormInput
@@ -40,7 +40,7 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
           },
         }}
         error={errors.cardName?.message}
-        placeholder="JOÃO M SILVA"
+        placeholder="Digite o nome impresso no cartão"
       />
 
       <div className="grid grid-cols-3 gap-3">
@@ -56,7 +56,7 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
             },
           }}
           error={errors.cardExpiryMonth?.message}
-          placeholder="01"
+          placeholder="Digite o mês"
         />
         <FormInput
           id="cardExpiryYear"
@@ -70,7 +70,7 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
             },
           }}
           error={errors.cardExpiryYear?.message}
-          placeholder="2027"
+          placeholder="Digite o ano"
         />
         <FormInput
           id="cardCvv"
@@ -84,7 +84,7 @@ export const CreditCardForm = ({ register, setValue, errors }: CreditCardFormPro
             },
           }}
           error={errors.cardCvv?.message}
-          placeholder="123"
+          placeholder="Digite o CVV"
         />
       </div>
     </div>
