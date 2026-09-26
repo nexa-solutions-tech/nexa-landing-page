@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { App } from "./App";
 import { AssinarPage } from "./pages/Assinar";
 import { CadastroPage } from "./pages/Cadastro";
+import { PrivacidadePage } from "./pages/Privacidade";
 
 ReactDOM.createRoot(document.getElementById("app")!).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("app")!).render(
         <Route path="/" element={<App />} />
         <Route path="/cadastro" element={<CadastroPage />} />
         <Route path="/assinar" element={<AssinarPage />} />
+        <Route path="/privacidade" element={<PrivacidadePage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

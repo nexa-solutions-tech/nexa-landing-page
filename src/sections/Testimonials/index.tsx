@@ -28,7 +28,7 @@ const testimonials = [
     },
   },
   {
-    text: "Eu precisava ver o que outro profissional tinha registrado antes do meu atendimento. No NexaClinic isso está ali, no prontuário do paciente. Simples assim.",
+    text: "Eu precisava ver o que outro profissional tinha registrado antes do meu atendimento. No Nexa Clinic isso está ali, no prontuário do paciente. Simples assim.",
     rating: 4.8,
     hasHalfStar: true,
     user: {
@@ -58,7 +58,7 @@ const testimonials = [
     },
   },
   {
-    text: "Atendo alguns pacientes em casa, fora da clínica. Abro o NexaClinic pelo celular, confiro o histórico e registro a evolução na hora, sem precisar levar notebook nem passar tudo pro sistema depois.",
+    text: "Atendo alguns pacientes em casa, fora da clínica. Abro o Nexa Clinic pelo celular, confiro o histórico e registro a evolução na hora, sem precisar levar notebook nem passar tudo pro sistema depois.",
     rating: 5.0,
     user: {
       name: "Dr. Rafael Nogueira",

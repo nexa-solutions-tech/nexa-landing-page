@@ -14,7 +14,7 @@ export const Comparison = () => {
         <FadeIn direction="up">
           <SectionHeader
             badge={<ComparisonHeader />}
-            title="NexaClinic vs. sistemas genéricos"
+            title="Nexa Clinic vs. sistemas genéricos"
             description="Sistemas genéricos tratam cada profissional como uma agenda isolada. Na reabilitação multidisciplinar, isso não funciona."
             maxDescriptionWidth="none"
             className="z-[3]"

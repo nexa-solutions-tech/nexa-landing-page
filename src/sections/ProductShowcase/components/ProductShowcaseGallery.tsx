@@ -12,14 +12,14 @@ interface ShowcaseItem {
 const showcaseItems: ShowcaseItem[] = [
   {
     image: agendaImg,
-    alt: "Tela de agendamentos do NexaClinic, com filtros por status, paciente e profissional, e a visualização semanal da agenda",
+    alt: "Tela de agendamentos do Nexa Clinic, com filtros por status, paciente e profissional, e a visualização semanal da agenda",
     title: "Agenda multiprofissional",
     description:
       "Toda a equipe em uma única tela. Cada profissional com sua própria coluna de horários, sem risco de conflito entre especialidades.",
   },
   {
     image: historicoImg,
-    alt: "Tela de atendimentos do paciente no NexaClinic, mostrando evoluções registradas por fonoaudiólogo, psicopedagogo e fisioterapeuta na mesma linha do tempo",
+    alt: "Tela de atendimentos do paciente no Nexa Clinic, mostrando evoluções registradas por fonoaudiólogo, psicopedagogo e fisioterapeuta na mesma linha do tempo",
     title: "Histórico compartilhado entre especialidades",
     description:
       "O mesmo paciente, atendido por profissionais de especialidades diferentes. Todas as evoluções na mesma linha do tempo, visíveis para toda a equipe.",

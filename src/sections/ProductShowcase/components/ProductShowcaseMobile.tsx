@@ -5,11 +5,11 @@ import mobileAgendamentoImg from "@/assets/screenshots/mobile-novo-agendamento.p
 const mobileScreens = [
   {
     image: mobileAgendaImg,
-    alt: "Tela de configuração de agenda do NexaClinic aberta no navegador de um celular",
+    alt: "Tela de configuração de agenda do Nexa Clinic aberta no navegador de um celular",
   },
   {
     image: mobileAgendamentoImg,
-    alt: "Tela de novo agendamento do NexaClinic aberta no navegador de um celular",
+    alt: "Tela de novo agendamento do Nexa Clinic aberta no navegador de um celular",
   },
 ];
 

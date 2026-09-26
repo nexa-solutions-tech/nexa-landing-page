@@ -18,7 +18,7 @@ export const FoundersNote = () => {
           <div className="relative flex flex-col items-center max-w-screen-sm gap-y-6 w-full z-[2]">
             <h3 className="text-white text-2xl tracking-[-0.72px] leading-[33.6px] text-center font-inter md:text-[32px] md:tracking-[-0.96px] md:leading-[44.8px]">
               "Reabilitação multidisciplinar é uma das áreas mais exigentes da saúde.
-              Criamos o NexaClinic para que sua equipe passe menos tempo gerenciando e mais tempo{" "}
+              Criamos o Nexa Clinic para que sua equipe passe menos tempo gerenciando e mais tempo{" "}
               <span className="text-indigo-400">
                 realmente cuidando dos pacientes que passam por ela.{" "}O sistema cuida da gestão.
                 você cuida das pessoas.
@@ -34,7 +34,7 @@ export const FoundersNote = () => {
                 />
               </div>
               <p className="text-violet-100/70 text-base tracking-[-0.32px] leading-[25.6px] font-inter whitespace-nowrap">
-                Equipe NexaClinic
+                Equipe Nexa Clinic
               </p>
             </div>
           </div>

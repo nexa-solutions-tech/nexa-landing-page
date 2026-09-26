@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "O NexaClinic foi feito para clínicas multidisciplinares?",
+    question: "O Nexa Clinic foi feito para clínicas multidisciplinares?",
     answer:
       "Sim. O sistema foi construído para o modelo onde vários profissionais de diferentes especialidades atendem os mesmos pacientes. O prontuário é centralizado por paciente, não por profissional, então cada especialista enxerga o histórico completo do paciente.",
   },
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "O sistema funciona em dispositivos móveis?",
     answer:
-      "Sim. O NexaClinic é 100% responsivo e funciona em celulares e tablets, permitindo que qualquer profissional da equipe acesse o prontuário do paciente de onde estiver.",
+      "Sim. O Nexa Clinic é 100% responsivo e funciona em celulares e tablets, permitindo que qualquer profissional da equipe acesse o prontuário do paciente de onde estiver.",
   },
 ];
 

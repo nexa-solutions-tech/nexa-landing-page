@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 const navLinks = [
   { label: "Planos", href: "#pricing" },
   { label: "Benefícios", href: "#features" },
-  { label: "Privacidade", href: "./privacy" },
+  { label: "Privacidade", href: "/privacidade" },
 ];
 
 const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
