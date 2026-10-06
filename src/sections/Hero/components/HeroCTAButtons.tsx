@@ -1,4 +1,4 @@
-    import { Button } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
 
 export const HeroCTAButtons = () => {
@@ -10,9 +10,6 @@ export const HeroCTAButtons = () => {
     >
       <Button href="/cadastro" variant="primary">
         Começar Agora
-      </Button>
-      <Button href="./contact" variant="secondary">
-        Agendar Demonstração
       </Button>
     </FadeIn>
   );

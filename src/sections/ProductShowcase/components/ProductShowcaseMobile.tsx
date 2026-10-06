@@ -6,10 +6,14 @@ const mobileScreens = [
   {
     image: mobileAgendaImg,
     alt: "Tela de configuração de agenda do Nexa Clinic aberta no navegador de um celular",
+    width: 876,
+    height: 1664,
   },
   {
     image: mobileAgendamentoImg,
     alt: "Tela de novo agendamento do Nexa Clinic aberta no navegador de um celular",
+    width: 876,
+    height: 1664,
   },
 ];
 
@@ -31,6 +35,8 @@ export const ProductShowcaseMobile = () => {
             <img
               src={screen.image}
               alt={screen.alt}
+              width={screen.width}
+              height={screen.height}
               loading="lazy"
               className="relative z-[2] w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
             />

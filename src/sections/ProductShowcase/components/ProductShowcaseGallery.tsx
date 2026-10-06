@@ -7,6 +7,8 @@ interface ShowcaseItem {
   alt: string;
   title: string;
   description: string;
+  width: number;
+  height: number;
 }
 
 const showcaseItems: ShowcaseItem[] = [
@@ -16,6 +18,8 @@ const showcaseItems: ShowcaseItem[] = [
     title: "Agenda multiprofissional",
     description:
       "Toda a equipe em uma única tela. Cada profissional com sua própria coluna de horários, sem risco de conflito entre especialidades.",
+    width: 2940,
+    height: 1492,
   },
   {
     image: historicoImg,
@@ -23,6 +27,8 @@ const showcaseItems: ShowcaseItem[] = [
     title: "Histórico compartilhado entre especialidades",
     description:
       "O mesmo paciente, atendido por profissionais de especialidades diferentes. Todas as evoluções na mesma linha do tempo, visíveis para toda a equipe.",
+    width: 1828,
+    height: 1426,
   },
 ];
 
@@ -43,6 +49,8 @@ const ShowcaseCard = ({ item }: { item: ShowcaseItem }) => (
           <img
             src={item.image}
             alt={item.alt}
+            width={item.width}
+            height={item.height}
             className="w-full h-auto block"
             loading="lazy"
           />
