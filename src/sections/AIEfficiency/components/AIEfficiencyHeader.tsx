@@ -4,9 +4,9 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const AIEfficiencyHeader = () => {
   return (
     <SectionHeader
-      badge={<SectionBadge>AUTOMAÇÃO</SectionBadge>}
-      title="Nunca Perca um Agendamento"
-      description="Lembretes e confirmações automáticas via WhatsApp reduzem faltas, enquanto toda a equipe acompanha os pacientes em tempo real"
+      badge={<SectionBadge>ORGANIZAÇÃO</SectionBadge>}
+      title="Agenda Sempre em Dia"
+      description="Toda a equipe acompanha os agendamentos no mesmo lugar, com o status de cada atendimento visível para todos os profissionais"
     />
   );
 };

@@ -1,15 +1,15 @@
 const features = [
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-9.svg",
-    title: "Lembretes Automáticos",
+    title: "Status de Cada Atendimento",
     description:
-      "Envie lembretes de consulta por WhatsApp de forma automática e reduza as faltas, sem esforço manual da recepção.",
+      "Acompanhe o status de cada agendamento e filtre por paciente, profissional ou status em poucos cliques.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-10.svg",
-    title: "Confirmação em Tempo Real",
+    title: "Uma Agenda para Toda a Equipe",
     description:
-      "Os pacientes confirmam ou cancelam pela própria mensagem e a agenda de todos os profissionais é atualizada na hora.",
+      "Qualquer alteração na agenda fica visível para os profissionais e para a recepção, sem planilha e sem troca de mensagens.",
   },
 ];
 

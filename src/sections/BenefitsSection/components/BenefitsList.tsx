@@ -15,7 +15,7 @@ const benefits = [
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-9.svg",
     title: "Agenda Multiprofissional",
     description:
-      "Visualize os horários de toda a equipe em uma única tela. Agende o mesmo paciente para diferentes especialidades no mesmo dia sem risco de conflito, com lembretes automáticos via WhatsApp.",
+      "Visualize os horários de toda a equipe em uma única tela. Agende o mesmo paciente para diferentes especialidades no mesmo dia, sem risco de conflito de horários.",
   },
   {
     icon: "https://c.animaapp.com/mkvwf206SqHHjG/assets/icon-1.svg",

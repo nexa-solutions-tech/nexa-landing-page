@@ -1,4 +1,4 @@
-import { Calendar, FileSignature, FileText, Mail, MessageCircle, type LucideIcon } from "lucide-react";
+import { Calendar, FileSignature, FileText, Mail, type LucideIcon } from "lucide-react";
 
 interface Integration {
   icon: LucideIcon;
@@ -8,9 +8,9 @@ interface Integration {
 
 const integrations: Integration[] = [
   {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    description: "Lembretes automáticos via WhatsApp para seus pacientes.",
+    icon: Mail,
+    label: "Gmail",
+    description: "Convites para a equipe e recuperação de senha chegam direto no e-mail de cada profissional.",
   },
   {
     icon: FileSignature,
@@ -26,11 +26,6 @@ const integrations: Integration[] = [
   //   icon: FileText,
   //   label: "TISS",
   //   description: "Integre com convênios e sistemas de faturamento TISS.",
-  // },
-  // {
-  //   icon: Mail,
-  //   label: "Gmail",
-  //   description: "Envie confirmações e comunicados direto pelo Gmail da clínica.",
   // },
 ];
 

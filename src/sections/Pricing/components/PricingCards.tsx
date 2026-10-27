@@ -25,7 +25,7 @@ const pricingPlans: PricingPlan[] = [
     badge: null,
     features: [
       "Até 50 pacientes ativos",
-      "Agenda online com lembretes",
+      "Agenda online",
       "Prontuário eletrônico básico",
       "Relatórios de evolução",
       "Suporte por e-mail",
@@ -41,7 +41,7 @@ const pricingPlans: PricingPlan[] = [
     badge: "Mais Popular",
     features: [
       "Pacientes ilimitados",
-      "Agenda com WhatsApp integrado",
+      "Agenda online completa",
       "Prontuário completo + avaliações",
       "Assinatura digital com certificado",
       "Relatórios avançados",
@@ -58,7 +58,7 @@ const pricingPlans: PricingPlan[] = [
     badge: "Mais Completo",
     features: [
       "Pacientes ilimitados",
-      "Agenda com WhatsApp integrado",
+      "Agenda online completa",
       "Prontuário completo + avaliações",
       "Assinatura digital com certificado",
       "Múltiplos profissionais",

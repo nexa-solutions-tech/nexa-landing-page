@@ -3,14 +3,14 @@ import type { PlanoNome } from "./types";
 export const PLAN_FEATURES: Record<PlanoNome, string[]> = {
   ESSENCIAL: [
     "Até 50 pacientes ativos",
-    "Agenda online com lembretes",
+    "Agenda online",
     "Prontuário eletrônico básico",
     "Relatórios de evolução",
     "Suporte por e-mail",
   ],
   PROFISSIONAL: [
     "Pacientes ilimitados",
-    "Agenda com WhatsApp integrado",
+    "Agenda online completa",
     "Prontuário completo + avaliações",
     "Faturamento TISS automático",
     "Relatórios avançados",
@@ -18,7 +18,7 @@ export const PLAN_FEATURES: Record<PlanoNome, string[]> = {
   ],
   CLINICA: [
     "Pacientes ilimitados",
-    "Agenda com WhatsApp integrado",
+    "Agenda online completa",
     "Prontuário completo + avaliações",
     "Faturamento TISS automático",
     "Múltiplos profissionais",
